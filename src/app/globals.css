@@ -129,3 +129,16 @@
   height: 100%;
   z-index: 20;
 }
+
+.before-shape {
+  position: relative;
+}
+.before-shape::before {
+  content: "";
+  position: absolute;
+  left: -4%;
+  bottom: 20%;
+  background-color: #f7c51e;
+  width: 7px;
+  height: 20px;
+}
