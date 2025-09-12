@@ -1,6 +1,9 @@
+"use client";
 import Zuraas from "@/components/Shared/Zuraas";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 import Image from "next/image";
+import HoverCard from "@/components/Shared/HoverCard";
 import Link from "next/link";
 
 const Project = () => {
@@ -30,76 +33,22 @@ const Project = () => {
         </div>
         <div className="grid grid-cols-12 mt-8 gap-4">
           <div className="col-span-4">
-            <div className="w-full h-[230px] overflow-hidden relative group">
-              <Image
-                src="/image/porto-image-1.jpg"
-                alt="Их таван нүдэн лого"
-                width={800}
-                height={400}
-                className="w-full h-full object-center object-cover group-hover:scale-105 transition-transform"
-              />
-              <div className="absolute top-1/2 -translate-y-1/2 w-full h-[120px] opacity-0 bg-black/60 group-hover:opacity-100 flex justify-center items-center">
-                <div className="flex flex-col items-center">
-                  <div className="text-white text-xl font-semibold">Jacov</div>
-                  <div className="text-white text-xl font-semibold">Villa</div>
-                </div>
-              </div>
-            </div>
+            <HoverCard />
           </div>
           <div className="col-span-4">
-            <div className="w-full h-[230px]">
-              <Image
-                src="/image/porto-image-1.jpg"
-                alt="Их таван нүдэн лого"
-                width={800}
-                height={400}
-                className="w-full h-full object-center object-cover"
-              />
-            </div>
+            <HoverCard />
           </div>
           <div className="col-span-4">
-            <div className="w-full h-[230px]">
-              <Image
-                src="/image/porto-image-1.jpg"
-                alt="Их таван нүдэн лого"
-                width={800}
-                height={400}
-                className="w-full h-full object-center object-cover"
-              />
-            </div>
+            <HoverCard />
           </div>
           <div className="col-span-4">
-            <div className="w-full h-[230px]">
-              <Image
-                src="/image/porto-image-1.jpg"
-                alt="Их таван нүдэн лого"
-                width={800}
-                height={400}
-                className="w-full h-full object-center object-cover"
-              />
-            </div>
+            <HoverCard />
           </div>
           <div className="col-span-4">
-            <div className="w-full h-[230px]">
-              <Image
-                src="/image/porto-image-1.jpg"
-                alt="Их таван нүдэн лого"
-                width={800}
-                height={400}
-                className="w-full h-full object-center object-cover"
-              />
-            </div>
+            <HoverCard />
           </div>
           <div className="col-span-4">
-            <div className="w-full h-[230px]">
-              <Image
-                src="/image/porto-image-1.jpg"
-                alt="Их таван нүдэн лого"
-                width={800}
-                height={400}
-                className="w-full h-full object-center object-cover"
-              />
-            </div>
+            <HoverCard />
           </div>
         </div>
       </div>
