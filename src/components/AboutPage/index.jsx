@@ -4,7 +4,7 @@ import DoYou from "./DoYou";
 import Hero from "./Hero";
 const AboutPage = () => {
   return (
-    <section className="my-12 lg:my-20 2xl:my-28 pt-24">
+    <section className="mt-12 lg:mt-20 2xl:mt-28 pt-24">
       <Hero />
       <OurExperts />
       <WhatCustomer />
