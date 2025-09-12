@@ -3,6 +3,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import OurExperts from "./OurExperts";
 import WhatCustomer from "./WhatCustomer";
+import DoYou from "./DoYou";
 
 const AboutPage = () => {
   return (
@@ -99,6 +100,7 @@ const AboutPage = () => {
       </div>
       <OurExperts />
       <WhatCustomer />
+      <DoYou />
     </section>
   );
 };

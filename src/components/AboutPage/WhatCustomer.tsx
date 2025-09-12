@@ -25,7 +25,6 @@ const WhatCustomer = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative">
-          {/* Testimonial */}
           <motion.div
             className="lg:col-span-6 space-y-6"
             initial={{ opacity: 0, x: -60 }}
@@ -56,12 +55,10 @@ const WhatCustomer = () => {
             </div>
           </motion.div>
 
-          {/* Dotted border */}
-          <div className="hidden lg:block lg:col-span-1">
-            <div className="h-full border-l-2 border-dotted border-gray-300 mx-auto"></div>
+          <div className="col-span-1 h-full">
+            <div className="h-full border-l-2 border-dotted border-[#f2f2f2] "></div>
           </div>
 
-          {/* Logos */}
           <motion.div
             className="lg:col-span-5"
             initial={{ opacity: 0, x: 60 }}
