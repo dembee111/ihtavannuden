@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className="mt-12 py-4 fixed inset-0 z-20">
+    <header className="mt-12 py-4 fixed inset-0 h-fit z-20">
       <div className="max-w-6xl mx-auto">
         <div className="flex justify-between items-center">
           <div>
