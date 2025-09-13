@@ -1,8 +1,5 @@
-"use client";
 import Zuraas from "@/components/Shared/Zuraas";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
-import Image from "next/image";
 import HoverCard from "@/components/Shared/HoverCard";
 import Link from "next/link";
 
@@ -30,6 +27,16 @@ const Project = () => {
               <Link href="/work">Бүгдийг үзэх</Link>
             </Button>
           </div>
+        </div>
+        <div className="flex justify-start items-center gap-4 mt-6">
+          <div className="text-white text-sm  border border-[#f7c51e] py-1 px-2">
+            Бүгд
+          </div>
+          <div className="text-white text-sm py-1 px-2">Цэцэрлэгжүүлэлт</div>
+          <div className="text-white text-sm py-1 px-2">
+            Барилгын материалын худалдаа
+          </div>
+          <div className="text-white text-sm py-1 px-2">Гадаад худалдаа</div>
         </div>
         <div className="grid grid-cols-12 mt-8 gap-4">
           <div className="col-span-4">
