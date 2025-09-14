@@ -13,7 +13,7 @@ const ContactPage = () => {
   return (
     <section className="my-42 px-4 2xl:px-0">
       <div className="max-w-6xl mx-auto space-y-12">
-        <div className="w-full h-80 rounded-2xl overflow-hidden shadow">
+        <div className="w-full h-90  overflow-hidden shadow">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18..."
             width="100%"

@@ -53,7 +53,7 @@ const BlogPage = () => {
                     asChild
                     className="w-52 py-5 bg-[#f7c51e] text-white font-semibold rounded-none hover:bg-black transition-colors"
                   >
-                    <Link href="/contact">Дэлгэрэнгүй</Link>
+                    <Link href="/news/1">Дэлгэрэнгүй</Link>
                   </Button>
                 </div>
               </div>
@@ -75,34 +75,34 @@ const BlogPage = () => {
               {[1, 2, 3, 4].map((item, index) => (
                 <div
                   key={index}
-                  className="group relative w-full h-40 overflow-hidden  shadow-lg cursor-pointer"
+                  className="group relative w-full h-40 overflow-hidden
+                  shadow-lg cursor-pointer"
                 >
-                  <Image
-                    src={"/image/about/1.webp"}
-                    alt={`images-${index}`}
-                    fill
-                    className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
-                  />
-
-                  <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors duration-500"></div>
-
-                  <div
-                    className="absolute top-0 left-0 h-full w-1/3 opacity-80"
-                    style={{
-                      background:
-                        "linear-gradient(260deg, rgba(255,255,255,0) 20%, #f2b410 20%)",
-                    }}
-                  ></div>
-
-                  <div className="absolute top-2 left-2 z-20">
-                    <span className=" text-white font-bold px-3 py-1 rounded">
-                      {index + 1}
-                    </span>
-                  </div>
-
-                  <h4 className="absolute top-1/2 left-[35%] -translate-y-1/2 text-white text-md font-medium z-10">
-                    Phasellus molestie feugiat hendrerit Interdum
-                  </h4>
+                  <Link href="/news/2">
+                    {" "}
+                    <Image
+                      src={"/image/about/1.webp"}
+                      alt={`images-${index}`}
+                      fill
+                      className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors duration-500"></div>
+                    <div
+                      className="absolute top-0 left-0 h-full w-1/3 opacity-80"
+                      style={{
+                        background:
+                          "linear-gradient(260deg, rgba(255,255,255,0) 20%, #f2b410 20%)",
+                      }}
+                    ></div>
+                    <div className="absolute top-2 left-2 z-20">
+                      <span className=" text-white font-bold px-3 py-1 rounded">
+                        {index + 1}
+                      </span>
+                    </div>
+                    <h4 className="absolute top-1/2 left-[35%] -translate-y-1/2 text-white text-md font-medium z-10">
+                      Phasellus molestie feugiat hendrerit Interdum
+                    </h4>
+                  </Link>
                 </div>
               ))}
             </div>

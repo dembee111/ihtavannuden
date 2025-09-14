@@ -1,11 +1,37 @@
+"use client";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { ArrowLeftIcon } from "lucide-react";
 
 const BlogDetails = () => {
+  const router = useRouter();
+
   return (
     <div className="my-42 px-4 2xl:px-0">
       <div className="max-w-6xl mx-auto">
+        <div className="mb-8">
+          <Button
+            onClick={() => router.back()}
+            className="
+        flex items-center gap-2
+        bg-[#f2b410] 
+        text-white
+        font-semibold 
+        px-5 
+        py-2 
+        transition 
+        duration-300 
+        ease-in-out 
+        hover:bg-yellow-400 
+        active:scale-95
+      "
+          >
+            <ArrowLeftIcon className="w-4 h-4" />
+            Буцах
+          </Button>
+        </div>
         <div className="grid grid-cols-12 gap-12 items-start">
           {/* Гол мэдээ */}{" "}
           <div className="col-span-12 lg:col-span-8 space-y-8">
