@@ -1,7 +1,9 @@
+"use client";
 import Zuraas from "@/components/Shared/Zuraas";
 import { Button } from "@/components/ui/button";
 import BlogCard from "@/components/Shared/BlogCard";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const HomeNews = () => {
   return (
@@ -30,12 +32,24 @@ const HomeNews = () => {
         </div>
 
         <div className="grid grid-cols-12 gap-4 mt-16">
-          <div className="col-span-12 md:col-span-6 mb-6 xl:mb-0">
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="col-span-12 md:col-span-6 mb-6 xl:mb-0"
+          >
             <BlogCard />
-          </div>
-          <div className="col-span-12 md:col-span-6">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="col-span-12 md:col-span-6"
+          >
             <BlogCard />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

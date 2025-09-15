@@ -1,7 +1,9 @@
+"use client";
 import Zuraas from "@/components/Shared/Zuraas";
 import { Button } from "@/components/ui/button";
 import HoverCard from "@/components/Shared/HoverCard";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const Project = ({ bgColor = false }) => {
   return (
@@ -72,24 +74,60 @@ const Project = ({ bgColor = false }) => {
           </div>
         </div>
         <div className="grid grid-cols-12 mt-8 gap-4">
-          <div className="col-span-6 xl:col-span-4">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="col-span-6 xl:col-span-4"
+          >
             <HoverCard />
-          </div>
-          <div className="col-span-6 xl:col-span-4">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="col-span-6 xl:col-span-4"
+          >
             <HoverCard />
-          </div>
-          <div className="col-span-6 xl:col-span-4">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="col-span-6 xl:col-span-4"
+          >
             <HoverCard />
-          </div>
-          <div className="col-span-6 xl:col-span-4">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+            className="col-span-6 xl:col-span-4"
+          >
             <HoverCard />
-          </div>
-          <div className="col-span-6 xl:col-span-4">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="col-span-6 xl:col-span-4"
+          >
             <HoverCard />
-          </div>
-          <div className="col-span-6 xl:col-span-4">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.9 }}
+            className="col-span-6 xl:col-span-4"
+          >
             <HoverCard />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

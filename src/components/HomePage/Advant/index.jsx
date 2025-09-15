@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { TradeIcon, FlowerIcon } from "@/components/Shared/Icons";
 
 const Advant = () => {
@@ -7,7 +9,13 @@ const Advant = () => {
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-12 gap-x-0 md:gap-x-8 space-y-6 md:space-y-0">
           <div className="col-span-12 md:col-span-4">
-            <div className="grid grid-cols-12">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="grid grid-cols-12"
+            >
               <div className="col-span-12 xl:col-span-3">
                 <Image
                   src="/image/icon-2.jpg"
@@ -28,11 +36,17 @@ const Advant = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           <div className="col-span-12 md:col-span-4">
-            <div className="grid grid-cols-12">
+            <motion.div
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="grid grid-cols-12"
+            >
               <div className="col-span-12 xl:col-span-3">
                 <TradeIcon className="size-14 fill-[#f7c51e]" />
               </div>
@@ -47,11 +61,17 @@ const Advant = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           <div className="col-span-12 md:col-span-4">
-            <div className="grid grid-cols-12">
+            <motion.div
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="grid grid-cols-12"
+            >
               <div className="col-span-12 xl:col-span-3">
                 <FlowerIcon className="size-14 fill-[#f7c51e]" />
               </div>
@@ -66,7 +86,7 @@ const Advant = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

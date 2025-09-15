@@ -1,8 +1,8 @@
 "use client";
-
 import { Parallax } from "react-parallax";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const Banner = () => (
   <Parallax bgImage="/image/about-header.jpg" strength={400}>
@@ -10,7 +10,13 @@ const Banner = () => (
       <div className="max-w-6xl mx-auto h-full">
         <div className="grid grid-cols-12 gap-4 h-full items-center">
           <div className="col-span-12 xl:col-span-6 z-20">
-            <div className="flex flex-col">
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="flex flex-col"
+            >
               <h1 className="text-2xl xl:text-3xl font-semibold text-white mb-3">
                 Бидэнтэй хамтран ажиллах
               </h1>
@@ -26,7 +32,7 @@ const Banner = () => (
               >
                 <Link href="/contact">Холбогдох</Link>
               </Button>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
