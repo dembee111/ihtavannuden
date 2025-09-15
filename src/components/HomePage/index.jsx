@@ -5,8 +5,9 @@ import Project from "./Project";
 import Banner from "./Banner";
 import HomeNews from "./HomeNews";
 import { createClient } from "contentful";
+// news
 
-const fetchDataByPage = async () => {
+async function fetchDataByPage() {
   const client = createClient({
     space: process.env.CONTENTFUL_SPACE,
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
@@ -18,7 +19,7 @@ const fetchDataByPage = async () => {
   });
 
   return result.items;
-};
+}
 
 const HomePage = async () => {
   const page = await fetchDataByPage();
