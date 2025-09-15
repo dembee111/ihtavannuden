@@ -15,9 +15,10 @@ const Banner = () => (
                 Бидэнтэй хамтран ажиллах
               </h1>
               <p className="text-white/80 mb-4 max-w-md xl:max-w-xl">
-                "Claritas est etiam processus dynamicus, qui sequitur mutationem
-                consuetudium lectorum. Mirum est notare quam littera gothica,
-                quam nunc putamus parum claram, anteposuerit litterarum formas."
+                "Их таван нүдэн" компани нь гадаад худалдаа, барилгын материалын
+                худалдаа болон цэцэрлэгжүүлэлтийн төслүүдийг амжилттай
+                хэрэгжүүлдэг. Хамтран ажилласнаар та чанартай, найдвартай
+                шийдлийг цаг тухайд нь авах боломжтой.
               </p>
               <Button
                 asChild

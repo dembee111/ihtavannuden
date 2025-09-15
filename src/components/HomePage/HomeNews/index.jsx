@@ -14,9 +14,9 @@ const HomeNews = () => {
             </h1>
             <Zuraas />
             <p className="text-black/80 text-sm mt-2 xl:mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-              suscipit odio ante, id dapibus elit condimentum vitae. Maecenas
-              eget orci vitae enim accumsan mollis.
+              Бидний компани болон салбарын сүүлийн үеийн мэдээ, шинэ төслүүд,
+              бүтээгдэхүүн, үйлчилгээний шинэчлэлтүүдийг танд хүргэнэ.
+              Үйлчлүүлэгчидтэйгээ цаг алдалгүй мэдээллээр холбогдохыг зорьдог.
             </p>
           </div>
           <div className="col-span-12 md:col-span-6 flex justify-start md:justify-end">

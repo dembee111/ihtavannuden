@@ -26,9 +26,10 @@ const Project = ({ bgColor = false }) => {
                 bgColor ? "text-black" : "text-white/80"
               } text-sm mt-2 xl:mt-4 max-w-md`}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-              suscipit odio ante, id dapibus elit condimentum vitae. Maecenas
-              eget orci vitae enim accumsan mollis.
+              Манай баг олон жил туршлага хуримтлуулан барилгын материалын
+              худалдаа, гадаад худалдаа, цэцэрлэгжүүлэлт зэрэг төслүүдийг
+              амжилттай гүйцэтгэж, үйлчлүүлэгчдэд өндөр чанартай, найдвартай
+              шийдлүүдийг хүргэж байна.
             </p>
           </div>
           <div className="col-span-12 md:col-span-6 flex justify-start md:justify-end">

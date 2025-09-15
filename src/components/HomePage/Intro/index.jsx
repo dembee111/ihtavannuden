@@ -19,16 +19,17 @@ const Intro = () => {
           </div>
           <div className="col-span-12 md:col-span-6">
             <div className="flex flex-col">
-              <h5 className="mb-3 tracking-widest">SINCE 1993</h5>
+              <h5 className="mb-3 tracking-widest">SINCE 2018</h5>
               <h1 className="text-2xl xl:text-4xl font-semibold mb-4 tracking-wide">
-                Our goal then and now is to provide quality on time projects.
+                Бидний зорилго нь чанартай, найдвартай барилгын болон худалдааны
+                төсөл, үйлчилгээ үзүүлэх явдал юм.
               </h1>
               <p className="text-slate-600">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                voluptas.
+                "Их таван нүдэн" компани 2018 онд байгуулагдсан бөгөөд гадаад
+                худалдаа, барилгын материалын худалдаа, цэцэрлэгжүүлэлт зэрэг
+                салбарт үйл ажиллагаа явуулж байна. Бид үйлчлүүлэгчдийн
+                хэрэгцээ, стандарт, чанарыг тэргүүн ээлжинд тавьдаг мэргэжлийн
+                багтай.
               </p>
             </div>
           </div>
