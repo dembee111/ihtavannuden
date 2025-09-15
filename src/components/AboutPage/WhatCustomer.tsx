@@ -29,10 +29,10 @@ const testimonials = [
 
 const WhatCustomer = () => {
   return (
-    <div className="my-16 lg:my-20 2xl:px-0 px-9">
-      <div className="max-w-6xl mx-auto px-4 space-y-12">
+    <div className="my-16 lg:my-20 2xl:px-0 px-4 ">
+      <div className="max-w-6xl mx-auto  space-y-12">
         <motion.div
-          className="space-y-4 text-center"
+          className="space-y-4 text-start md:text-center"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -41,7 +41,7 @@ const WhatCustomer = () => {
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900">
             Манай үйлчлүүлэгч юу хэлэх вэ?
           </h1>
-          <div className="border-b-4 border-[#f7c51e] w-12 mx-auto"></div>
+          <div className="border-b-4 border-[#f7c51e] w-12 md:mx-auto"></div>
           <p className="max-w-2xl mx-auto text-gray-600 leading-relaxed">
             Бид олон жилийн туршлагатай, мэргэжлийн өндөр түвшний багтайгаар
             харилцагчиддаа хамгийн найдвартай үйлчилгээ үзүүлдэг.
@@ -59,11 +59,11 @@ const WhatCustomer = () => {
             >
               {testimonials.map((t, i) => (
                 <SwiperSlide key={i}>
-                  <div className="space-y-6 text-center lg:text-left">
+                  <div className="space-y-6 text-start md:text-center lg:text-left">
                     <p className="text-[#555555] leading-relaxed text-lg italic">
                       {t.text}
                     </p>
-                    <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-start gap-4 mt-4">
+                    <div className="flex flex-col lg:flex-row items-start md:items-center justify-start md:justify-center lg:justify-start gap-4 mt-4">
                       <div className="relative h-24 w-24">
                         <Image
                           src={t.img}
@@ -96,7 +96,7 @@ const WhatCustomer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 items-center justify-items-center">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 items-start md:items-center justify-items-center">
               {[
                 "/image/about/client-1.jpg",
                 "/image/about/client-about-6.jpg",

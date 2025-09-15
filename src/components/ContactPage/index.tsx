@@ -11,11 +11,11 @@ import {
 
 const ContactPage = () => {
   return (
-    <section className="my-42 px-4 2xl:px-0">
+    <section className=" mt-32 md:mt-42 mb-12 md:mb-32 px-4 2xl:px-0">
       <div className="max-w-6xl mx-auto space-y-12">
         <div className="w-full h-90  overflow-hidden shadow">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18..."
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10700.746924123843!2d106.62947718715822!3d47.89407100000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d96e9de6dd2fc63%3A0xa33603d6ba218110!2z0KHQpdCULdC40LnQvSAzMi3RgCDRhdC-0YDQvtC-!5e0!3m2!1sen!2smn!4v1757913189429!5m2!1sen!2smn"
             width="100%"
             height="100%"
             style={{ border: 0 }}
@@ -32,9 +32,9 @@ const ContactPage = () => {
             </h1>
             <div className="border-b-3 border-[#f7c51e] w-[40px]"></div>
             <p className="text-gray-600 leading-relaxed">
-              Lorem ipsum gravida nibh vel velit auctor aliqunean
-              sollicitudinlor quis bibendum auci elit consequat ipsutis sem nibh
-              id elit sed vulputate.
+              Манай багтай холбогдож, таны санал хүсэлт, асуулт, зөвлөгөөг
+              хүлээн авна уу. Бид таны хэрэгцээ, хүсэлтийг анхааралтай сонсож,
+              хамгийн тохиромжтой шийдлийг санал болгоно.
             </p>
 
             <div className="flex gap-4 text-white">

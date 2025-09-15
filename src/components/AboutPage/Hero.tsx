@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div className="max-w-6xl mx-auto px-4 md:px-9 2xl:px-0 space-y-4 md:space-y-0 lg:space-y-9">
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 items-start lg:items-center">
+    <div className="max-w-6xl mx-auto px-4  2xl:px-0 space-y-9 md:space-y-0 lg:space-y-9">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start lg:items-center">
         <motion.div
           className="md:col-span-6"
           initial={{ opacity: 0, x: -40 }}
@@ -48,7 +48,7 @@ const Hero = () => {
           </p>
         </motion.div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 items-start lg:items-center">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start lg:items-center">
         <motion.div
           className="md:col-span-6 md:hidden block"
           initial={{ opacity: 0, x: -40 }}
