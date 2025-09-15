@@ -5,10 +5,10 @@ import { FacebookIcon } from "@/components/Shared/Icons";
 const Footer = () => {
   return (
     <>
-      <footer className="my-0 py-16 bg-[#212121] w-full">
+      <footer className="my-0 py-16 bg-[#212121] w-full px-3 xl:px-0">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-12 gap-12">
-            <div className="col-span-4">
+          <div className="grid grid-cols-12 gap-6 xl:gap-12">
+            <div className="col-span-12 xl:col-span-4">
               <h2 className="text-white uppercase text-lg font-light before-shape ml-5">
                 Бидний <strong className="font-semibold">тухай</strong>
               </h2>
@@ -36,7 +36,7 @@ const Footer = () => {
                 </h5>
               </div>
             </div>
-            <div className="col-span-4">
+            <div className="col-span-12 xl:col-span-4">
               <h2 className="text-white uppercase text-lg font-light before-shape ml-5">
                 Үндсэн <strong className="font-semibold">цэс</strong>
               </h2>
@@ -79,7 +79,7 @@ const Footer = () => {
                 </Link>
               </div>
             </div>
-            <div className="col-span-4">
+            <div className="col-span-12 xl:col-span-4">
               <h2 className="text-white uppercase text-lg font-light before-shape ml-5">
                 Үйл <strong className="font-semibold">ажиллагаа</strong>
               </h2>
@@ -142,8 +142,8 @@ const Footer = () => {
       </footer>
       <footer className="bg-[#262626] py-4">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-12 items-center">
-            <div className="col-span-4">
+          <div className="grid grid-cols-12 items-center space-y-6">
+            <div className="col-span-12 xl:col-span-4 flex justify-center xl:justify-start">
               <Link
                 href="https://gegeensoft.com"
                 target="__blank"
@@ -152,7 +152,7 @@ const Footer = () => {
                 Developed by Gegeensoft.com
               </Link>
             </div>
-            <div className="col-span-4 flex justify-center">
+            <div className="col-span-12 xl:col-span-4 flex justify-center">
               <Image
                 src="/image/logo.jpg"
                 alt="Их таван нүдэн лого"
@@ -165,7 +165,7 @@ const Footer = () => {
             <Link
               href="https://www.facebook.com/profile.php?id=61579746330654&rdid=SBh1PslYrvKpFEDa&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16wAXELzzN%2F#"
               target="__blank"
-              className="col-span-4 flex justify-end items-end"
+              className="col-span-12 xl:col-span-4 flex justify-center xl:justify-end items-end"
             >
               <FacebookIcon className="size-8 fill-white" />
             </Link>

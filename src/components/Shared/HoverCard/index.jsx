@@ -9,7 +9,7 @@ export default function HoverCard() {
 
   return (
     <div
-      className="w-full h-[230px] overflow-hidden relative group"
+      className="w-full h-[160px] xl:h-[230px] overflow-hidden relative group"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
@@ -36,7 +36,7 @@ export default function HoverCard() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -40 }}
                 transition={{ duration: 0.5 }}
-                className="text-white text-xl font-semibold"
+                className="text-white text-lg xl:text-xl font-semibold"
               >
                 Jacov
               </motion.div>
@@ -46,7 +46,7 @@ export default function HoverCard() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 40 }}
                 transition={{ duration: 0.5 }}
-                className="text-white text-xl font-semibold"
+                className="text-white text-lg xl:text-xl font-semibold"
               >
                 Villa
               </motion.div>

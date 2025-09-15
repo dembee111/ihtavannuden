@@ -121,6 +121,11 @@
   }
 }
 
+html,
+body {
+  overflow-x: hidden !important;
+}
+
 .bg-overlay::after {
   content: "";
   position: absolute;
