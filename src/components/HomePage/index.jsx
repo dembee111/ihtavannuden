@@ -23,11 +23,13 @@ async function fetchDataByPage() {
 
 const HomePage = async () => {
   const page = await fetchDataByPage();
-  console.log("🚀 ~ HomePage ~ page:", page);
+  const homeDatas = page[0].fields.components;
+  const advants = homeDatas.filter((item) => item.fields.slug === "advant");
+  console.log("🚀 ~ HomePage ~ page:", advants);
   return (
     <>
       <Hero />
-      <Advant />
+      <Advant advants={advants} />
       <Intro />
       <Project />
       <Banner />

@@ -3,91 +3,50 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { TradeIcon, FlowerIcon } from "@/components/Shared/Icons";
 
-const Advant = () => {
+const Advant = ({ advants }) => {
   return (
     <section className="py-16 bg-[#262626] px-3 xl:px-0">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-12 gap-x-0 md:gap-x-8 space-y-6 md:space-y-0">
-          <div className="col-span-12 md:col-span-4">
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="grid grid-cols-12"
-            >
-              <div className="col-span-12 xl:col-span-3">
-                <Image
-                  src="/image/icon-2.jpg"
-                  alt="Их таван нүдэн лого"
-                  width={60}
-                  height={60}
-                  className="w-[60px] h-[60px] object-center object-contain"
-                />
-              </div>
-              <div className="col-span-12 xl:col-span-9">
-                <div className="flex flex-col">
-                  <h1 className="text-white text-lg font-semibold mb-1 md:mb-2">
-                    Барилгын материалын худалдаа
-                  </h1>
-                  <p className="text-white/80 leading-6 text-sm max-w-[18rem]">
-                    Чанартай, баталгаатай барилгын материалыг нэг дороос санал
-                    болгож, таны төсөлд хамгийн зөв шийдлийг хүргэнэ.
-                  </p>
+          {advants.map((item, index) => (
+            <div key={index} className="col-span-12 md:col-span-4">
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="grid grid-cols-12"
+              >
+                <div className="col-span-12 xl:col-span-3">
+                  {index === 0 && (
+                    <Image
+                      src="/image/icon-2.jpg"
+                      alt="Их таван нүдэн лого"
+                      width={60}
+                      height={60}
+                      className="w-[60px] h-[60px] object-center object-contain"
+                    />
+                  )}
+                  {index === 1 && (
+                    <TradeIcon className="size-14 fill-[#f7c51e]" />
+                  )}
+                  {index === 2 && (
+                    <FlowerIcon className="size-14 fill-[#f7c51e]" />
+                  )}
                 </div>
-              </div>
-            </motion.div>
-          </div>
-
-          <div className="col-span-12 md:col-span-4">
-            <motion.div
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              className="grid grid-cols-12"
-            >
-              <div className="col-span-12 xl:col-span-3">
-                <TradeIcon className="size-14 fill-[#f7c51e]" />
-              </div>
-              <div className="col-span-12 xl:col-span-9">
-                <div className="flex flex-col">
-                  <h1 className="text-white text-lg font-semibold mb-1 md:mb-2">
-                    Гадаад худалдаа
-                  </h1>
-                  <p className="text-white/80 leading-6 text-sm max-w-[18rem]">
-                    Дэлхийн зах зээлээс өргөн сонголттой бараа, бүтээгдэхүүнийг
-                    шууд импортлон, найдвартай нийлүүлэлтийг танд хүргэнэ.
-                  </p>
+                <div className="col-span-12 xl:col-span-9">
+                  <div className="flex flex-col">
+                    <h1 className="text-white text-lg font-semibold mb-1 md:mb-2">
+                      {item?.fields?.title}
+                    </h1>
+                    <p className="text-white/80 leading-6 text-sm max-w-[18rem]">
+                      {item?.fields?.content}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
-          </div>
-
-          <div className="col-span-12 md:col-span-4">
-            <motion.div
-              initial={{ opacity: 0, y: 80 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="grid grid-cols-12"
-            >
-              <div className="col-span-12 xl:col-span-3">
-                <FlowerIcon className="size-14 fill-[#f7c51e]" />
-              </div>
-              <div className="col-span-12 xl:col-span-9">
-                <div className="flex flex-col">
-                  <h1 className="text-white text-lg font-semibold mb-1 md:mb-2">
-                    Цэцэрлэгжүүлэлт
-                  </h1>
-                  <p className="text-white/80 leading-6 text-sm max-w-[18rem]">
-                    Хот, хороолол болон байгууллагын гадна орчныг ногоонжуулж,
-                    тохижуулан, байгальд ээлтэй таатай орчинг бүрдүүлнэ.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
+              </motion.div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
