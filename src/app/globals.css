@@ -142,3 +142,11 @@
   width: 7px;
   height: 20px;
 }
+
+.yellow-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #f7c51e;
+  opacity: 90%;
+}

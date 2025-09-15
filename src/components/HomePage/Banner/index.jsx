@@ -1,29 +1,36 @@
 "use client";
-import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 
-const Banner = () => {
-  return (
-    <div className="my-12 md:my-16 xl:my-0">
-      <ParallaxProvider>
-        <div className="relative h-[50vh] xl:h-[60vh] flex justify-center items-center overflow-hidden">
-          <Parallax speed={-20} className="absolute inset-0 w-full h-full">
-            <div
-              className="w-full h-full bg-cover bg-center"
-              style={{
-                backgroundImage: "url('/image/office.jpg')",
-              }}
-            ></div>
-          </Parallax>
-          <h1 className="text-xl md:text-2xl xl:text-4xl font-extralight text-white relative z-10 max-w-2xl text-center leading-relaxed tracking-wider">
-            Бид маргаашийг инженерчилж, илүү сайхан ирээдүйг бүтээнэ.
-          </h1>
-          <Parallax
-            speed={-20}
-            className="bg-black opacity-50 absolute inset-0"
-          ></Parallax>
+import { Parallax } from "react-parallax";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+
+const Banner = () => (
+  <Parallax bgImage="/image/about-header.jpg" strength={400}>
+    <div style={{ height: 450 }} className="relative yellow-overlay">
+      <div className="max-w-6xl mx-auto h-full">
+        <div className="grid grid-cols-12 gap-4 h-full items-center">
+          <div className="col-span-6 z-20">
+            <div className="flex flex-col">
+              <h1 className="text-3xl font-semibold text-white mb-3">
+                Бидэнтэй хамтран ажиллах
+              </h1>
+              <p className="text-white/80 mb-4">
+                "Claritas est etiam processus dynamicus, qui sequitur mutationem
+                consuetudium lectorum. Mirum est notare quam littera gothica,
+                quam nunc putamus parum claram, anteposuerit litterarum formas."
+              </p>
+              <Button
+                asChild
+                className="w-52 py-5 bg-transparent text-white border-2 border-white rounded-none hover:bg-[#212121] hover:border-[#212121] transition-colors"
+              >
+                <Link href="/contact">Холбогдох</Link>
+              </Button>
+            </div>
+          </div>
+          <div className="col-span-6"></div>
         </div>
-      </ParallaxProvider>
+      </div>
     </div>
-  );
-};
+  </Parallax>
+);
 export default Banner;
