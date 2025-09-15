@@ -9,7 +9,9 @@ import {
   Youtube,
 } from "lucide-react";
 
-const ContactPage = () => {
+// test
+
+function ContactPage() {
   return (
     <section className=" mt-32 md:mt-42 mb-12 md:mb-32 px-4 2xl:px-0">
       <div className="max-w-6xl mx-auto space-y-12">
@@ -122,6 +124,6 @@ const ContactPage = () => {
       </div>
     </section>
   );
-};
+}
 
 export default ContactPage;
