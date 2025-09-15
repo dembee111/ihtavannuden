@@ -31,7 +31,6 @@ const WhatCustomer = () => {
   return (
     <section className="my-20">
       <div className="max-w-6xl mx-auto px-4 space-y-12">
-        {/* Title Section */}
         <motion.div
           className="space-y-4 text-center"
           initial={{ opacity: 0, y: 40 }}
@@ -60,13 +59,7 @@ const WhatCustomer = () => {
             >
               {testimonials.map((t, i) => (
                 <SwiperSlide key={i}>
-                  <motion.div
-                    className="space-y-6 text-center lg:text-left"
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.7 }}
-                  >
+                  <div className="space-y-6 text-center lg:text-left">
                     <p className="text-[#555555] leading-relaxed text-lg italic">
                       {t.text}
                     </p>
@@ -86,7 +79,7 @@ const WhatCustomer = () => {
                         <p className="text-[#f7c51e]">{t.title}</p>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 </SwiperSlide>
               ))}
             </Swiper>
