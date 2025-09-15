@@ -1,5 +1,6 @@
 import Zuraas from "@/components/Shared/Zuraas";
 import { Button } from "@/components/ui/button";
+import BlogCard from "@/components/Shared/BlogCard";
 import Link from "next/link";
 
 const HomeNews = () => {
@@ -28,18 +29,13 @@ const HomeNews = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-12 gap-4">
+        <div className="grid grid-cols-12 gap-4 mt-16">
           <div className="col-span-6">
-            <div className="flex flex-col">
-              <div className="flex justify-start">
-                <div></div>
-                <div>
-                  <h1>Phasellus molestie feugiat hendrerit Interdum</h1>
-                </div>
-              </div>
-            </div>
+            <BlogCard />
           </div>
-          <div className="col-span-6"></div>
+          <div className="col-span-6">
+            <BlogCard />
+          </div>
         </div>
       </div>
     </section>
