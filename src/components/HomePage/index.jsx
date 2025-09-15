@@ -4,6 +4,7 @@ import Intro from "./Intro";
 import Project from "./Project";
 import Banner from "./Banner";
 import HomeNews from "./HomeNews";
+import { createClient } from "contentful";
 
 const fetchDataByPage = async () => {
   const client = createClient({
