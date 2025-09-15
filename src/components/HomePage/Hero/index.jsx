@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 
-const Hero = () => {
+const Hero = ({ homeHero }) => {
   return (
     <section className="h-[80vh] xl:h-screen w-full bg-[url('/image/hero-11.webp')] relative bg-overlay bg-cover bg-center z-10">
       <div className="absolute left-1/2 top-1/2 transform z-30 -translate-x-1/2 -translate-y-1/2 w-full h-auto">
@@ -22,7 +22,7 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="text-white text-4xl md:text-5xl xl:text-7xl uppercase font-semibold mb-3 xl:mb-5"
           >
-            Их таван нүдэн
+            {homeHero[0]?.fields?.title}
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 80 }}
@@ -31,9 +31,7 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="text-white/80 max-w-sm md:max-w-lg text-center"
           >
-            "Их таван нүдэн" компани нь чанартай, найдвартай үйл ажиллагаагаа
-            олон улсын стандартад нийцүүлэн явуулж, үйлчлүүлэгчиддээ шилдэг
-            бүтээгдэхүүн, үйлчилгээ хүргэдэг.
+            {homeHero[0]?.fields?.content}
           </motion.p>
         </div>
       </div>

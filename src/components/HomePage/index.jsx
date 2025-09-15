@@ -25,10 +25,11 @@ const HomePage = async () => {
   const page = await fetchDataByPage();
   const homeDatas = page[0].fields.components;
   const advants = homeDatas.filter((item) => item.fields.slug === "advant");
-  console.log("🚀 ~ HomePage ~ page:", advants);
+  const homeHero = homeDatas.filter((item) => item.fields.slug === "home-hero");
+  console.log("🚀 ~ HomePage ~ page:", homeHero);
   return (
     <>
-      <Hero />
+      <Hero homeHero={homeHero} />
       <Advant advants={advants} />
       <Intro />
       <Project />
