@@ -17,7 +17,7 @@ const Header = () => {
   const isHome = pathname === "/";
 
   return (
-    <header className="mt-2 xl:mt-6 2xl:mt-12 py-3 md:py-4 absolute inset-0 h-fit z-20 px-3 xl:px-0">
+    <header className="mt-2 xl:mt-6 2xl:mt-10 py-3 md:py-4 absolute inset-0 h-fit z-20 px-3 xl:px-0">
       <div className="max-w-6xl mx-auto">
         <div className="flex justify-between items-center">
           {/* Logo */}

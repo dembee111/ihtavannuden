@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="h-[80vh] xl:h-screen w-full bg-[url('/image/bg-hero-image.jpg')] relative bg-overlay bg-cover bg-center z-10">
+    <section className="h-[80vh] xl:h-screen w-full bg-[url('/image/hero-11.webp')] relative bg-overlay bg-cover bg-center z-10">
       <div className="absolute left-1/2 top-1/2 transform z-30 -translate-x-1/2 -translate-y-1/2 w-full h-auto">
         <div className="flex flex-col items-center px-3 md:px-0">
           <motion.h2
@@ -31,9 +31,9 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="text-white/80 max-w-sm md:max-w-lg text-center"
           >
-            “Монгол Контент” ХХК-аас эрхлэн гаргадаг GoGo.mn сайт үйл
-            ажиллагаагаа олон улсын стандартад нийцүүлэн ажиллаж буйг
-            баталгаажуулах сертифекатыг хоёр дахь удаагаа авлаа.
+            "Их таван нүдэн" компани нь чанартай, найдвартай үйл ажиллагаагаа
+            олон улсын стандартад нийцүүлэн явуулж, үйлчлүүлэгчиддээ шилдэг
+            бүтээгдэхүүн, үйлчилгээ хүргэдэг.
           </motion.p>
         </div>
       </div>
