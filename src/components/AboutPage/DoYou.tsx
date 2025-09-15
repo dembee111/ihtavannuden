@@ -3,10 +3,10 @@ import Link from "next/link";
 
 const DoYou = () => {
   return (
-    <div className="bg-[#f7c51e] py-[50px] ">
+    <div className="bg-[#f7c51e] py-[50px] 2xl:px-0 px-9">
       <div className="max-w-6xl mx-auto">
         <div className="flex justify-between items-center">
-          <h1 className="text-white text-4xl font-bold">
+          <h1 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold">
             Та бидэнтэй холбогдоорой !
           </h1>
           <Button

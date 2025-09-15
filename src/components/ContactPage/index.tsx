@@ -39,19 +39,19 @@ const ContactPage = () => {
 
             <div className="flex gap-4 text-white">
               <a
-                href="#"
+                href="https://www.facebook.com/share/16wAXELzzN/"
                 className="hover:text-[#1877f2] bg-[#3b5998]  p-1 rounded-md"
               >
                 <Facebook />
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/share/16wAXELzzN/"
                 className="hover:text-[#e1306c]  bg-[#3ba1f2] p-1 rounded-md"
               >
                 <Instagram />
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/share/16wAXELzzN/"
                 className="hover:text-[#ff0000] bg-[#dd4b39] p-1 rounded-md"
               >
                 <Youtube />
@@ -71,7 +71,7 @@ const ContactPage = () => {
                 <Mail className="text-[#f7c51e]" />
                 <div>
                   <p className="font-semibold">Имайл :</p>
-                  <p>yourmail@example.com</p>
+                  <p>Ikhtavannuden@gmail.com</p>
                 </div>
               </div>
 
@@ -80,8 +80,8 @@ const ContactPage = () => {
                 <div>
                   <p className="font-semibold">Хаяг :</p>
                   <p>
-                    Jl. Maleer Indah II, Maleer, Batununggal, Kota Bandung, Jawa
-                    Barat 40274
+                    Компаний агуулах Улаанбаатар хот сонгинохайрхан дүүрэг 32-р
+                    хороо мал бордох гудамж
                   </p>
                 </div>
               </div>

@@ -29,7 +29,7 @@ const testimonials = [
 
 const WhatCustomer = () => {
   return (
-    <section className="my-20">
+    <div className="my-16 lg:my-20 2xl:px-0 px-9">
       <div className="max-w-6xl mx-auto px-4 space-y-12">
         <motion.div
           className="space-y-4 text-center"
@@ -38,7 +38,7 @@ const WhatCustomer = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-2xl md:text-4xl font-semibold tracking-tight text-gray-900">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900">
             Манай үйлчлүүлэгч юу хэлэх вэ?
           </h1>
           <div className="border-b-4 border-[#f7c51e] w-12 mx-auto"></div>
@@ -99,10 +99,11 @@ const WhatCustomer = () => {
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 items-center justify-items-center">
               {[
                 "/image/about/client-1.jpg",
+                "/image/about/client-about-6.jpg",
                 "/image/about/client-1.jpg",
+                "/image/about/client-about-6.jpg",
                 "/image/about/client-1.jpg",
-                "/image/about/client-1.jpg",
-                "/image/about/client-1.jpg",
+                "/image/about/client-about-6.jpg",
               ].map((logo, i) => (
                 <Image
                   key={i}
@@ -117,7 +118,7 @@ const WhatCustomer = () => {
           </motion.div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
