@@ -2,10 +2,10 @@ import Image from "next/image";
 
 const Advant = () => {
   return (
-    <section className="py-16 bg-[#262626] px-3 md:px-0">
+    <section className="py-16 bg-[#262626] px-3 xl:px-0">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-12 gap-x-0 md:gap-x-8 space-y-6 md:space-y-0">
-          <div className="col-span-12 lg:col-span-4">
+          <div className="col-span-12 md:col-span-4">
             <div className="grid grid-cols-12">
               <div className="col-span-12 xl:col-span-3">
                 <Image
@@ -31,7 +31,7 @@ const Advant = () => {
             </div>
           </div>
 
-          <div className="col-span-12 lg:col-span-4">
+          <div className="col-span-12 md:col-span-4">
             <div className="grid grid-cols-12">
               <div className="col-span-12 xl:col-span-3">
                 <Image
@@ -57,7 +57,7 @@ const Advant = () => {
             </div>
           </div>
 
-          <div className="col-span-12 lg:col-span-4">
+          <div className="col-span-12 md:col-span-4">
             <div className="grid grid-cols-12">
               <div className="col-span-12 xl:col-span-3">
                 <Image

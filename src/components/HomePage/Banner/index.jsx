@@ -14,7 +14,7 @@ const Banner = () => (
               <h1 className="text-2xl xl:text-3xl font-semibold text-white mb-3">
                 Бидэнтэй хамтран ажиллах
               </h1>
-              <p className="text-white/80 mb-4">
+              <p className="text-white/80 mb-4 max-w-md xl:max-w-xl">
                 "Claritas est etiam processus dynamicus, qui sequitur mutationem
                 consuetudium lectorum. Mirum est notare quam littera gothica,
                 quam nunc putamus parum claram, anteposuerit litterarum formas."

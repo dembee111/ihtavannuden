@@ -4,7 +4,7 @@ const Intro = () => {
   return (
     <section className="py-12 xl:py-24 px-3 md:px-0">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-12">
+        <div className="grid grid-cols-12 gap-3">
           <div className="col-span-12 md:col-span-6">
             <div className="w-full xl:w-[515px] h-[316px] overflow-hidden">
               <Image

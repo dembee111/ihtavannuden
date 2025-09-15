@@ -9,7 +9,7 @@ export default function HoverCard() {
 
   return (
     <div
-      className="w-full h-[160px] xl:h-[230px] overflow-hidden relative group"
+      className="w-full h-[160px] md:h-[200px] xl:h-[230px] overflow-hidden relative group"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
