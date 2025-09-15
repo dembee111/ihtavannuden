@@ -13,16 +13,28 @@ const Header = () => {
       <div className="max-w-6xl mx-auto">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link href="/" className="cursor-pointer">
-            <Image
-              src="/image/logo.jpg"
-              alt="Их таван нүдэн лого"
-              priority
-              width={177}
-              height={60}
-              className="w-full h-full object-center object-cover dark:invert"
-            />
-          </Link>
+          <div className="flex justify-start items-center gap-2">
+            <Link
+              href="/"
+              className="cursor-pointer w-[60px] h-[60px] overflow-hidden"
+            >
+              <Image
+                src="/image/logo.png"
+                alt="Их таван нүдэн лого"
+                priority
+                width={300}
+                height={300}
+                className="w-[60px] h-[60px] object-center object-cover dark:invert"
+              />
+            </Link>
+            <h1
+              className={`${
+                isHome ? " text-white" : "text-gray-700"
+              } font-semibold uppercase text-xl leading-6 tracking-wider`}
+            >
+              Их таван <br /> нүдэн
+            </h1>
+          </div>
 
           {/* Navigation */}
           <div
