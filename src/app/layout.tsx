@@ -50,12 +50,12 @@ export const metadata = {
 Бид хэрэглэгчдэд найдвартай бүтээгдэхүүн, мэргэжлийн суурилуулалт болон засвар үйлчилгээний цогц шийдлийг хүргэдэг.`,
     images: [
       {
-        url: "https://images.ctfassets.net/885o8osvb3qs/1U8CBQgRxDsR0lm1V4xnbN/862deabebe889717a63d9006b571df49/hurgult-engineering.jpg",
+        url: "https://images.ctfassets.net/5yb73dsvpmu0/3Ti1t3qMRWd7IdIEpOkgrO/558cf821e14e3ef96a7f24b53f30ca6c/cover.png",
         width: 800,
         height: 600,
       },
       {
-        url: "https://images.ctfassets.net/885o8osvb3qs/1U8CBQgRxDsR0lm1V4xnbN/862deabebe889717a63d9006b571df49/hurgult-engineering.jpg",
+        url: "https://images.ctfassets.net/5yb73dsvpmu0/3Ti1t3qMRWd7IdIEpOkgrO/558cf821e14e3ef96a7f24b53f30ca6c/cover.png",
         width: 1800,
         height: 1600,
         alt: "for big screen",
@@ -77,35 +77,35 @@ export const metadata = {
     creator: "",
     creatorId: "1467726470533754981",
     images: [
-      "https://images.ctfassets.net/885o8osvb3qs/1U8CBQgRxDsR0lm1V4xnbN/862deabebe889717a63d9006b571df49/hurgult-engineering.jpg",
+      "https://images.ctfassets.net/5yb73dsvpmu0/3Ti1t3qMRWd7IdIEpOkgrO/558cf821e14e3ef96a7f24b53f30ca6c/cover.png",
     ], // Must be an absolute URL
   },
   icons: [
     {
       rel: "apple-touch-icon",
       sizes: "180x180",
-      url: "https://air-mining.mn/favicon.ico",
+      url: "https://ikhtavannuden.mn/favicon.ico",
     },
     {
       rel: "icon",
       type: "image/png",
       sizes: "32x32",
-      url: "https://air-mining.mn/favicon.ico",
+      url: "https://ikhtavannuden.mn/favicon.ico",
     },
     {
       rel: "icon",
       type: "image/png",
       sizes: "16x16",
-      url: "https://air-mining.mn/favicon.ico",
+      url: "https://ikhtavannuden.mn/favicon.ico",
     },
     {
       rel: "mask-icon",
       color: "#f8893a",
-      url: "https://air-mining.mn/favicon.ico",
+      url: "https://ikhtavannuden.mn/favicon.ico",
     },
     {
       rel: "shortcut icon",
-      url: "https://air-mining.mn/favicon.ico",
+      url: "https://ikhtavannuden.mn/favicon.ico",
     },
   ],
 };
