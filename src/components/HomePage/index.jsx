@@ -26,12 +26,15 @@ const HomePage = async () => {
   const homeDatas = page[0].fields.components;
   const advants = homeDatas.filter((item) => item.fields.slug === "advant");
   const homeHero = homeDatas.filter((item) => item.fields.slug === "home-hero");
-  console.log("🚀 ~ HomePage ~ page:", homeHero);
+  const homeAbout = homeDatas.filter(
+    (item) => item.fields.slug === "home-about"
+  );
+  // console.log("🚀 ~ HomePage ~ page:", homeAbout);
   return (
     <>
       <Hero homeHero={homeHero} />
       <Advant advants={advants} />
-      <Intro />
+      <Intro homeAbout={homeAbout} />
       <Project />
       <Banner />
       <HomeNews />
