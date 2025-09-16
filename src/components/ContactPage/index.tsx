@@ -31,7 +31,7 @@ function ContactPage() {
     e.preventDefault();
 
     const client = createClient({
-      accessToken: "CFPAT-NZ3IBW62uSMg9HU3PZEmbKtHLOXm2jt-2jauTjwIdew",
+      accessToken: process.env.NEXT_PUBLIC_INPUT_TOKEN as string,
     });
 
     try {
