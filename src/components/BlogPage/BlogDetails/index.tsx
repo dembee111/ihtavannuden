@@ -11,65 +11,65 @@ import { motion } from "framer-motion";
 
 const options = {
   renderMark: {
-    [MARKS.BOLD]: (text) => (
+    [MARKS.BOLD]: (text: any) => (
       <strong className="bold-text text-gray-700 tracking-wide leading-relaxed mb-3 my-2">
         {text}
       </strong>
     ),
-    [MARKS.ITALIC]: (text) => (
+    [MARKS.ITALIC]: (text: any) => (
       <em className="italic-text text-gray-700  tracking-wide leading-relaxed mb-4">
         {text}
       </em>
     ),
   },
   renderNode: {
-    [BLOCKS.PARAGRAPH]: (node, children) => (
+    [BLOCKS.PARAGRAPH]: (node: any, children: any) => (
       <p className="text-base text-b/90 tracking-wide leading-relaxed mb-4">
         {children}
       </p>
     ),
 
-    [BLOCKS.UL_LIST]: (node, children) => (
+    [BLOCKS.UL_LIST]: (node: any, children: any) => (
       <ul className="list-disc ml-4">{children}</ul>
     ),
-    [BLOCKS.OL_LIST]: (node, children) => (
+    [BLOCKS.OL_LIST]: (node: any, children: any) => (
       <ol className="list-decimal ml-4">{children}</ol>
     ),
-    [BLOCKS.LIST_ITEM]: (node, children) => (
+    [BLOCKS.LIST_ITEM]: (node: any, children: any) => (
       <li className="mb-1">{children}</li>
     ),
-    [BLOCKS.HEADING_1]: (node, children) => (
+    [BLOCKS.HEADING_1]: (node: any, children: any) => (
       <h1 className="text-xl md:text-2xl font-bold text-black my-4">
         {children}
       </h1>
     ),
-    [BLOCKS.HEADING_2]: (node, children) => (
+    [BLOCKS.HEADING_2]: (node: any, children: any) => (
       <h2 className="text-lg md:text-xl font-bold text-black my-4">
         {children}
       </h2>
     ),
-    [BLOCKS.HEADING_3]: (node, children) => (
+    [BLOCKS.HEADING_3]: (node: any, children: any) => (
       <h3 className="text-xl md:text-2xl font-bold text-black my-4">
         {children}
       </h3>
     ),
-    [BLOCKS.HEADING_4]: (node, children) => (
+    [BLOCKS.HEADING_4]: (node: any, children: any) => (
       <h4 className="text-lg md:text-2xl font-bold text-black my-4">
         {children}
       </h4>
     ),
-    [BLOCKS.HEADING_5]: (node, children) => (
+    [BLOCKS.HEADING_5]: (node: any, children: any) => (
       <h5 className="text-base md:text-xl font-bold text-black my-4">
         {children}
       </h5>
     ),
-    [BLOCKS.HEADING_6]: (node, children) => (
+    [BLOCKS.HEADING_6]: (node: any, children: any) => (
       <h6 className="text-base md:text-lg font-bold text-black my-4">
         {children}
       </h6>
     ),
   },
-  renderText: (text) => <span className="text-style my-4">{text}</span>,
+  renderText: (text: any) => <span className="text-style my-4">{text}</span>,
 };
 const MONTHS_MN = [
   "Нэгдүгээр сар",
@@ -86,10 +86,14 @@ const MONTHS_MN = [
   "Арванхоёрдугаар сар",
 ];
 
-const BlogDetails = ({ blogDetails, blogsAll }) => {
+const BlogDetails = ({ blogDetails, blogsAll }: any) => {
   const router = useRouter();
 
-  const [dateParts, setDateParts] = useState({ day: "", month: "", year: "" });
+  const [dateParts, setDateParts] = useState<any>({
+    day: "",
+    month: "",
+    year: "",
+  });
 
   useEffect(() => {
     if (blogDetails?.sys?.createdAt) {
@@ -223,7 +227,7 @@ const BlogDetails = ({ blogDetails, blogsAll }) => {
               }}
               className="space-y-4"
             >
-              {blogsAll.map((item, index) => (
+              {blogsAll.map((item: any, index: any) => (
                 <motion.div
                   variants={{
                     hidden: { opacity: 0, y: 20 },

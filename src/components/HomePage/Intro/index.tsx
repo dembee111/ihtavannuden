@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const Intro = ({ homeAbout }) => {
+const Intro = ({ homeAbout }: any) => {
   console.log("🚀 ~ Intro ~ homeAbout:", homeAbout[0]);
   return (
     <section className="py-12 xl:py-24 px-3 md:px-0">

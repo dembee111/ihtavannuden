@@ -3,12 +3,12 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { TradeIcon, FlowerIcon } from "@/components/Shared/Icons";
 
-const Advant = ({ advants }) => {
+const Advant = ({ advants }: any) => {
   return (
     <section className="py-16 bg-[#262626] px-3 xl:px-0">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-12 gap-x-0 md:gap-x-8 space-y-6 md:space-y-0">
-          {advants.map((item, index) => (
+          {advants.map((item: any, index: any) => (
             <div key={index} className="col-span-12 md:col-span-4">
               <motion.div
                 initial={{ opacity: 0, y: 40 }}

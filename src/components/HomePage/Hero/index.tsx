@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 
-const Hero = ({ homeHero }) => {
+const Hero = ({ homeHero }: any) => {
   return (
     <section className="h-[80vh] xl:h-screen w-full bg-[url('/image/hero-11.webp')] relative bg-overlay bg-cover bg-center z-10">
       <div className="absolute left-1/2 top-1/2 transform z-30 -translate-x-1/2 -translate-y-1/2 w-full h-auto">

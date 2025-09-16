@@ -19,7 +19,7 @@ function ContactPage() {
     description: "",
   });
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: any) => {
     setFormData((prevData) => ({
       ...prevData,
       [e.target.name]: e.target.value,

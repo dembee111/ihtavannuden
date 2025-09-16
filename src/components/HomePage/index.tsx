@@ -9,8 +9,8 @@ import { createClient } from "contentful";
 
 async function fetchDataByPage() {
   const client = createClient({
-    space: process.env.CONTENTFUL_SPACE,
-    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+    space: process.env.CONTENTFUL_SPACE as string,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string,
   });
 
   const result = await client.getEntries({
@@ -23,11 +23,15 @@ async function fetchDataByPage() {
 
 const HomePage = async () => {
   const page = await fetchDataByPage();
-  const homeDatas = page[0].fields.components;
-  const advants = homeDatas.filter((item) => item.fields.slug === "advant");
-  const homeHero = homeDatas.filter((item) => item.fields.slug === "home-hero");
+  const homeDatas: any = page[0].fields.components;
+  const advants = homeDatas.filter(
+    (item: any) => item.fields.slug === "advant"
+  );
+  const homeHero = homeDatas.filter(
+    (item: any) => item.fields.slug === "home-hero"
+  );
   const homeAbout = homeDatas.filter(
-    (item) => item.fields.slug === "home-about"
+    (item: any) => item.fields.slug === "home-about"
   );
   // console.log("🚀 ~ HomePage ~ page:", homeAbout);
   return (

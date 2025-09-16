@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const BlogList = ({ blogsData }) => {
+const BlogList = ({ blogsData }: any) => {
   return (
     <>
       <div>
@@ -29,7 +29,7 @@ const BlogList = ({ blogsData }) => {
         }}
       >
         {blogsData?.length > 0 &&
-          blogsData?.map((item, index) => (
+          blogsData?.map((item: any, index: any) => (
             <motion.div
               key={index}
               variants={{

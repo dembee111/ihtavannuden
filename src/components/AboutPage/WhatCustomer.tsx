@@ -27,7 +27,7 @@ const testimonials = [
   },
 ];
 
-const WhatCustomer = ({ data }) => {
+const WhatCustomer = ({ data }: any) => {
   return (
     <div className="my-16 lg:my-20 2xl:px-0 px-4 ">
       <div className="max-w-6xl mx-auto  space-y-12">
@@ -56,7 +56,7 @@ const WhatCustomer = ({ data }) => {
               autoplay={{ delay: 5000 }}
               pagination={{ clickable: true }}
             >
-              {data?.fields?.partnerContent?.map((t, i) => (
+              {data?.fields?.partnerContent?.map((t: any, i: any) => (
                 <SwiperSlide key={i}>
                   <div className="space-y-6 text-start md:text-center lg:text-left">
                     <p className="text-[#555555] leading-relaxed text-lg italic">
@@ -96,7 +96,7 @@ const WhatCustomer = ({ data }) => {
             transition={{ duration: 0.7 }}
           >
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 items-start md:items-center justify-items-center">
-              {data?.fields?.brands?.map((logo, i) => (
+              {data?.fields?.brands?.map((logo: any, i: any) => (
                 <Image
                   key={i}
                   src={`https:${logo?.fields?.file?.url}`}

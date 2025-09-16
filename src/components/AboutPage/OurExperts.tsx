@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const OurExperts = ({ data }) => {
+const OurExperts = ({ data }: any) => {
   return (
     <div className="bg-[#f2f2f2] py-12 md:py-16 lg:py-20 my-12 lg:my-24 2xl:px-0 px-4 ">
       <div className="max-w-6xl mx-auto">
@@ -24,7 +24,7 @@ const OurExperts = ({ data }) => {
         </motion.div>
 
         <div className="mt-12 grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-4 ">
-          {data?.fields?.position?.map((expert, i) => (
+          {data?.fields?.position?.map((expert: any, i: any) => (
             <motion.div
               key={i}
               className="relative bg-white shadow-md overflow-hidden group cursor-pointer"

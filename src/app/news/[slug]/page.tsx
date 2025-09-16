@@ -5,8 +5,8 @@ import { unstable_cache } from "next/cache";
 const fetchDataByNameProdcut = unstable_cache(
   async () => {
     const client = createClient({
-      space: process.env.CONTENTFUL_SPACE,
-      accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      space: process.env.CONTENTFUL_SPACE as string,
+      accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string,
     });
 
     const result = await client.getEntries({
@@ -21,8 +21,8 @@ const fetchDataByNameProdcut = unstable_cache(
 const blogDetailsByName = unstable_cache(
   async (slug) => {
     const client = createClient({
-      space: process.env.CONTENTFUL_SPACE,
-      accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      space: process.env.CONTENTFUL_SPACE as string,
+      accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string,
     });
 
     const result = await client.getEntries({
@@ -36,7 +36,7 @@ const blogDetailsByName = unstable_cache(
   { revalidate: 10 }
 );
 
-const page = async ({ params }) => {
+const page = async ({ params }: any) => {
   const { slug } = params;
   const blogsAll = await fetchDataByNameProdcut();
   console.log("blogsAll", blogsAll);

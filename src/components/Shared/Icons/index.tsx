@@ -1,4 +1,4 @@
-export const LocationIcon = ({ className }) => {
+export const LocationIcon = ({ className }: any) => {
   return (
     <svg className={className} viewBox="0 0 368.16 368.16">
       <g>
@@ -39,7 +39,7 @@ export const LocationIcon = ({ className }) => {
   );
 };
 
-export const FileIcon = ({ className }) => {
+export const FileIcon = ({ className }: any) => {
   return (
     <svg viewBox="0 0 512 512" className={className}>
       <path d="M397.657,18.343A8,8,0,0,0,392,16H56A40.045,40.045,0,0,0,16,56V456a40.045,40.045,0,0,0,40,40H456a40.045,40.045,0,0,0,40-40V120a8,8,0,0,0-2.343-5.657ZM400,43.313,468.687,112H424a24.028,24.028,0,0,1-24-24ZM72.022,480H56a24.028,24.028,0,0,1-24-24V56A24.028,24.028,0,0,1,56,32H72.022A39.788,39.788,0,0,0,64,56V456A39.788,39.788,0,0,0,72.022,480Zm48,0H104a24.028,24.028,0,0,1-24-24V56a24.028,24.028,0,0,1,24-24h16.022A39.788,39.788,0,0,0,112,56V456A39.788,39.788,0,0,0,120.022,480ZM480,456a24.028,24.028,0,0,1-24,24H152a24.028,24.028,0,0,1-24-24V56a24.028,24.028,0,0,1,24-24H384V88a40.045,40.045,0,0,0,40,40h56Z"></path>
@@ -62,7 +62,7 @@ export const FileIcon = ({ className }) => {
   );
 };
 
-export const LongArrowRightIcon = ({ className }) => {
+export const LongArrowRightIcon = ({ className }: any) => {
   return (
     <svg width="32" height="16" viewBox="0 0 33 16" className={className}>
       <path
@@ -73,7 +73,7 @@ export const LongArrowRightIcon = ({ className }) => {
   );
 };
 
-export const LongArrowLeftIcon = ({ className }) => {
+export const LongArrowLeftIcon = ({ className }: any) => {
   return (
     <svg width="32" height="16" viewBox="0 0 33 16" className={className}>
       <path
@@ -84,7 +84,7 @@ export const LongArrowLeftIcon = ({ className }) => {
   );
 };
 
-export const CopyIcon = ({ className }) => {
+export const CopyIcon = ({ className }: any) => {
   return (
     <svg className={className} viewBox="0 0 512 512">
       <g>
@@ -98,7 +98,7 @@ export const CopyIcon = ({ className }) => {
   );
 };
 
-export const NegIcon = ({ className }) => {
+export const NegIcon = ({ className }: any) => {
   return (
     <svg viewBox="0 0 60 60" className={className}>
       <g>
@@ -111,7 +111,7 @@ export const NegIcon = ({ className }) => {
   );
 };
 
-export const HoyorIcon = ({ className }) => {
+export const HoyorIcon = ({ className }: any) => {
   return (
     <svg viewBox="0 0 61 60" className={className}>
       <g>
@@ -124,7 +124,7 @@ export const HoyorIcon = ({ className }) => {
   );
 };
 
-export const GurawIcon = ({ className }) => {
+export const GurawIcon = ({ className }: any) => {
   return (
     <svg viewBox="0 0 61 60" className={className}>
       <g>
@@ -137,7 +137,7 @@ export const GurawIcon = ({ className }) => {
   );
 };
 
-export const DuruwIcon = ({ className }) => {
+export const DuruwIcon = ({ className }: any) => {
   return (
     <svg viewBox="0 0 61 60" className={className}>
       <g>
@@ -150,7 +150,7 @@ export const DuruwIcon = ({ className }) => {
   );
 };
 
-export const TawIcon = ({ className }) => {
+export const TawIcon = ({ className }: any) => {
   return (
     <svg viewBox="0 0 61 60" className={className}>
       <g>
@@ -163,7 +163,7 @@ export const TawIcon = ({ className }) => {
   );
 };
 
-export const ZurgaaIcon = ({ className }) => {
+export const ZurgaaIcon = ({ className }: any) => {
   return (
     <svg viewBox="0 0 61 60" className={className}>
       <g>
@@ -176,7 +176,7 @@ export const ZurgaaIcon = ({ className }) => {
   );
 };
 
-export const DolooIcon = ({ className }) => {
+export const DolooIcon = ({ className }: any) => {
   return (
     <svg viewBox="0 0 60 60" className={className}>
       <g>
@@ -191,7 +191,7 @@ export const DolooIcon = ({ className }) => {
   );
 };
 
-export const UpIcon = ({ className }) => {
+export const UpIcon = ({ className }: any) => {
   return (
     <svg viewBox="0 0 24 24" className={className}>
       <path
@@ -204,7 +204,7 @@ export const UpIcon = ({ className }) => {
   );
 };
 
-export const PlusIcon = ({ className }) => {
+export const PlusIcon = ({ className }: any) => {
   return (
     <svg viewBox="0 0 25 24" className={className}>
       <path
@@ -223,7 +223,7 @@ export const PlusIcon = ({ className }) => {
   );
 };
 
-export const DeleteIcon = ({ className }) => {
+export const DeleteIcon = ({ className }: any) => {
   return (
     <svg viewBox="-40 0 427 427.00131" className={className}>
       <path d="m232.398438 154.703125c-5.523438 0-10 4.476563-10 10v189c0 5.519531 4.476562 10 10 10 5.523437 0 10-4.480469 10-10v-189c0-5.523437-4.476563-10-10-10zm0 0"></path>
@@ -234,7 +234,7 @@ export const DeleteIcon = ({ className }) => {
   );
 };
 
-export const LoadingIcon = ({ className }) => {
+export const LoadingIcon = ({ className }: any) => {
   return (
     <svg viewBox="0 0 24 24" className={className}>
       <g>
@@ -244,7 +244,7 @@ export const LoadingIcon = ({ className }) => {
   );
 };
 
-export const UpdownIcon = ({ className }) => {
+export const UpdownIcon = ({ className }: any) => {
   return (
     <svg viewBox="0 0 240.835 240.835" className={className}>
       <g>
@@ -280,7 +280,7 @@ export const UpdownIcon = ({ className }) => {
   );
 };
 
-export const ChevronIcon = ({ className }) => {
+export const ChevronIcon = ({ className }: any) => {
   return (
     <svg viewBox="0 0 100 100" className={className}>
       <path d="m50 58.71a1.48 1.48 0 0 0 1-.43l45-44.11-2-2.17-44 43.11-43.95-43.06-2.05 2.14 45 44.09a1.48 1.48 0 0 0 1 .43zm0 26.09-43.95-43.07-2.05 2.14 45 44.13a1.5 1.5 0 0 0 2.1 0l45-44.11-2.1-2.17z"></path>
@@ -288,7 +288,7 @@ export const ChevronIcon = ({ className }) => {
   );
 };
 
-export const FacebookIcon = ({ className }) => {
+export const FacebookIcon = ({ className }: any) => {
   return (
     <svg className={className} viewBox="0 0 64 64">
       <path id="Artboard1" d="m0 0h64v64h-64z" fill="none"></path>
@@ -302,7 +302,7 @@ export const FacebookIcon = ({ className }) => {
   );
 };
 
-export const TradeIcon = ({ className }) => {
+export const TradeIcon = ({ className }: any) => {
   return (
     <svg viewBox="0 0 60 60" className={className}>
       <g fillRule="evenodd">
@@ -329,7 +329,7 @@ export const TradeIcon = ({ className }) => {
   );
 };
 
-export const FlowerIcon = ({ className }) => {
+export const FlowerIcon = ({ className }: any) => {
   return (
     <svg viewBox="0 0 512 512" className={className}>
       <path d="m462.458 496.034c-14.832-10.454-31.743-18.239-48.618-24.733-30.449-11.717-81.12-25.616-151.298-26.412 1.14-9.706 3.84-23.647 10.163-39.169 6.282-15.421 14.785-29.328 25.439-41.686 5.003 2.06 17.879 6.573 34.708 6.573 15.584 0 34.552-3.875 53.764-17.157 45.577-31.511 42.467-80.157 42.312-82.212-.2-2.66-1.798-5.013-4.195-6.18-.685-.333-7.171-3.402-17.42-5.483 8.358-13.118 14.489-27.358 18.267-42.469 2.345-9.386-12.204-13.022-14.553-3.638-3.984 15.936-10.896 30.795-20.549 44.212-16.241-.383-36.634 3.297-57.525 17.74-15.571 10.766-25.294 23.867-31.36 36.387-13.162 1.676-24.474 1.06-32.138.118 15.238-20.554 54.956-70.37 99.673-96.388 8.362-4.865.818-17.832-7.543-12.965-43.515 25.318-81.391 70.388-99.646 94.317-1.053-23.347 2.995-64.523 37.363-98.999 22.399-22.47 49.06-35.49 79.239-38.696 15.797-1.678 28.505-.085 34.833 1.055.666 3.914 1.486 10.234 1.625 18.168.169 9.582 15.168 9.466 14.998-.263-.272-15.567-2.885-25.688-2.995-26.111-.678-2.583-2.677-4.61-5.25-5.324-.751-.208-18.732-5.086-44.105-2.514-23.351 2.369-57.74 11.768-88.968 43.094-2.605 2.614-5.043 5.262-7.34 7.933 4.212-12.969 8.811-26.996 13.511-41.103 13.585-4.145 47.135-18.348 61.545-60.145 18.087-52.468-13.16-89.8-14.499-91.364-1.74-2.033-4.432-2.984-7.063-2.496-2.011.373-49.456 9.733-67.784 62.895-15.217 44.138 6.468 78.632 13.095 87.727-4.373 13.136-8.643 26.159-12.588 38.3-3.037-20.291-10.953-44.098-28.935-67.009-27.317-34.807-60.358-48.215-83.267-53.335-24.892-5.563-43.32-2.85-44.093-2.731-2.641.404-4.867 2.183-5.845 4.669-.211.536-5.181 13.35-6.877 33.001-.83 9.639 14.113 10.926 14.945 1.29.955-11.07 3.078-19.71 4.498-24.533 6.428-.381 19.232-.455 34.708 3.081 29.592 6.761 54.533 22.85 74.131 47.819 18.566 23.657 27.771 51.101 27.359 81.571-.135 9.928-1.325 18.586-2.639 25.237-29.669-55.256-71.678-97.708-73.52-99.556-6.828-6.851-17.45 3.736-10.624 10.588.443.445 43.748 44.237 72.436 98.903-6.703-.153-15.399-.893-25.152-3.05-29.365-6.497-53.922-22.108-72.987-46.399-13.274-16.914-22.063-35.685-26.123-55.791-1.914-9.482-16.619-6.514-14.703 2.969 4.527 22.422 14.293 43.31 29.027 62.083 26.675 33.988 59.426 46.998 82.202 51.927 11.35 2.457 23.047 3.623 34.661 3.243v27.01.449 98.835c-2.263-4.88-4.707-9.499-7.281-13.872 1.017-8.877 4.717-61.236-43.268-99.055-52.064-41.033-106.277-20.222-108.56-19.315-2.479.984-4.25 3.212-4.648 5.851-.365 2.419-8.345 59.733 44.373 101.282 24.486 19.298 50.073 24.336 70.116 24.336 13.006 0 23.672-2.121 30.192-3.844 10.442 18.237 16.615 38.368 18.469 60.245-38.814.656-75.025 5.112-107.76 13.292-9.386 2.346-5.75 16.896 3.637 14.553 31.729-7.929 66.924-12.239 104.73-12.854v17.239c0 9.674 15 9.674 15 0v-17.282c88.456.879 144.988 22.536 173.1 37.108h-358.11c7.289-3.877 16.621-8.27 28.128-12.646 9.042-3.439 3.709-17.463-5.332-14.021-18.681 7.105-31.983 14.314-39.854 19.11-15.98 9.737-15.98 12.085-15.98 15.057 0 4.142 3.357 7.5 7.5 7.5h410c11.4-.001 6.914-11.973 1.248-15.967zm-120.974-208.276c31.646-21.878 61.7-14.666 72.508-10.88-.421 11.584-4.612 42.598-35.906 64.234-28.376 19.62-55.981 14.913-68.557 11.072 14.784-13.835 32.765-25.324 53.868-34.365 8.892-3.81 2.987-17.597-5.906-13.788-19.04 8.157-34.734 17.87-47.69 28.276 3.9-13.918 12.56-31.328 31.683-44.549zm-56.575 40.118c3.359 0 6.939-.121 10.693-.394-2.47 8.57-3.424 16.108-3.766 21.402-14.203 15.076-23.72 30.63-30.078 44.412v-67.323c5.26.907 13.276 1.903 23.151 1.903zm-3.679-259.967c12.559-36.429 41.009-48.502 51.969-51.888 6.511 9.597 21.431 37.058 9.014 73.076-9.297 26.969-27.956 40.278-41.167 46.575 9.739-28.784 19.362-56.053 26.343-73.173 3.654-8.958-10.237-14.623-13.889-5.664-7.284 17.861-17.208 45.998-27.166 75.452-6.82-13.051-14.741-36.425-5.104-64.378zm-144.57 284.518c-19.127-15.074-31.474-34.261-36.699-57.027-2.562-11.162-2.7-20.528-2.479-25.755 12.784-3.582 51.987-10.993 89.442 18.528 18.597 14.657 30.571 33.541 35.591 56.126.73 3.284 1.249 6.409 1.617 9.325-4.995-6.021-10.078-11.326-14.972-15.917-25.875-24.278-51.559-34.444-52.64-34.865-9.015-3.512-14.458 10.467-5.443 13.978.237.092 24.038 9.513 47.819 31.826 7.598 7.129 14.289 14.686 20.089 22.648-16.617 3.388-50.788 5.988-82.325-18.867z"></path>

@@ -19,12 +19,12 @@ const MONTHS_MN = [
   "Арванхоёрдугаар сар",
 ];
 
-const BlogCard = ({ blogsData }) => {
+const BlogCard = ({ blogsData }: any) => {
   return (
     <>
       {" "}
       {blogsData?.length > 0 &&
-        blogsData?.map((item, index) => {
+        blogsData?.map((item: any, index: any) => {
           if (!item?.sys?.createdAt) return null;
           const date = new Date(item.sys.createdAt);
           const day = date.getDate();

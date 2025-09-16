@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const Hero = ({ aboutData }) => {
+const Hero = ({ aboutData }: any) => {
   return (
     <div className="max-w-6xl mx-auto px-4  2xl:px-0 space-y-9 md:space-y-0 lg:space-y-9">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start lg:items-center">

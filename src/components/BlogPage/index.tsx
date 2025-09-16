@@ -3,8 +3,8 @@ import BlogCard from "./BlogCard";
 import BlogList from "./BlogList";
 
 const client = createClient({
-  space: process.env.CONTENTFUL_SPACE,
-  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+  space: process.env.CONTENTFUL_SPACE as string,
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string,
 });
 
 async function fetchDataByBlogs() {

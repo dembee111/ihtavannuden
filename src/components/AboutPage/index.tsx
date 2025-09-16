@@ -5,8 +5,8 @@ import Hero from "./Hero";
 import { createClient } from "contentful";
 
 const client = createClient({
-  space: process.env.CONTENTFUL_SPACE,
-  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+  space: process.env.CONTENTFUL_SPACE as string,
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string,
 });
 
 export async function fetchDataByPage() {
