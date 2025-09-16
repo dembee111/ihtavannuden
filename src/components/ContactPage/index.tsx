@@ -9,7 +9,8 @@ import {
   Youtube,
 } from "lucide-react";
 import { useState } from "react";
-// import { createClient } from "contentful-management";
+import { createClient } from "contentful-management";
+import Swal from "sweetalert2";
 
 function ContactPage() {
   const [formData, setFormData] = useState({
@@ -25,40 +26,57 @@ function ContactPage() {
       [e.target.name]: e.target.value,
     }));
   };
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
 
-  //   const client = createClient({
-  //     accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_INPUT_TOKEN,
-  //   });
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
 
-  //   try {
-  //     const space = await client.getSpace("m13q2cw2lx92");
-  //     const environment = await space.getEnvironment("master");
+    const client = createClient({
+      accessToken: "CFPAT-NZ3IBW62uSMg9HU3PZEmbKtHLOXm2jt-2jauTjwIdew",
+    });
 
-  //     await environment.createEntry("contact", {
-  //       fields: {
-  //         name: { "en-US": formData.name },
-  //         companyName: { "en-US": formData.company },
-  //         email: { "en-US": formData.email },
-  //         phone: { "en-US": Number(formData.phone) },
-  //         descrption: { "en-US": formData.description },
-  //       },
-  //     });
+    try {
+      const space = await client.getSpace("5yb73dsvpmu0");
+      const environment = await space.getEnvironment("master");
 
-  //     Swal.fire("Амжилттай илгээгдлээ!", "", "success");
-  //     setFormData({
-  //       name: "",
-  //       phone: "",
-  //       email: "",
-  //       description: "",
-  //       company: "",
-  //     });
-  //   } catch (error) {
-  //     console.error("Error:", error.message);
-  //     Swal.fire("Алдаа гарлаа!", "Системийн алдаа.", "error");
-  //   }
-  // };
+      await environment.createEntry("contact", {
+        fields: {
+          name: { "en-US": formData.name },
+          phone: { "en-US": Number(formData.phone) },
+          email: { "en-US": formData.email },
+          description: {
+            "en-US": {
+              nodeType: "document",
+              data: {},
+              content: [
+                {
+                  nodeType: "paragraph",
+                  content: [
+                    {
+                      nodeType: "text",
+                      value: formData.description,
+                      marks: [],
+                      data: {},
+                    },
+                  ],
+                  data: {},
+                },
+              ],
+            },
+          },
+        },
+      });
+
+      Swal.fire("Амжилттай илгээгдлээ!", "", "success");
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        description: "",
+      });
+    } catch (error) {
+      Swal.fire("Алдаа гарлаа!", "Системийн алдаа.", "error");
+    }
+  };
 
   return (
     <section className=" mt-32 md:mt-42 mb-12 md:mb-32 px-4 2xl:px-0">
@@ -159,12 +177,16 @@ function ContactPage() {
           </div>
 
           <div className="lg:col-span-6">
-            <form className="bg-white border border-[#aaaaaa]  shadow p-6 space-y-4">
+            <form
+              className="bg-white border border-[#aaaaaa]  shadow p-6 space-y-4"
+              onSubmit={handleSubmit}
+            >
               <input
                 type="text"
                 placeholder="Нэр"
                 className="w-full border-b border-gray-300 focus:border-[#f7c51e] outline-none py-2"
                 value={formData.name}
+                name="name"
                 onChange={handleInputChange}
               />
               <input
@@ -172,13 +194,15 @@ function ContactPage() {
                 placeholder="Имайл"
                 className="w-full border-b border-gray-300 focus:border-[#f7c51e] outline-none py-2"
                 value={formData.email}
+                name="email"
                 onChange={handleInputChange}
               />
               <input
-                type="text"
+                type="tel"
                 placeholder="Утас"
                 className="w-full border-b border-gray-300 focus:border-[#f7c51e] outline-none py-2"
                 value={formData.phone}
+                name="phone"
                 onChange={handleInputChange}
               />
               <textarea
@@ -186,6 +210,7 @@ function ContactPage() {
                 rows={5}
                 className="w-full border-b border-gray-300 focus:border-[#f7c51e] outline-none py-2 resize-none"
                 value={formData.description}
+                name="description"
                 onChange={handleInputChange}
               />
               <button

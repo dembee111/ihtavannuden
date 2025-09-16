@@ -4,8 +4,20 @@ import { Button } from "@/components/ui/button";
 import HoverCard from "@/components/Shared/HoverCard";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
-const Project = ({ bgColor = false }) => {
+const Project = ({ bgColor = false, services }: any) => {
+  const [selectedCategory, setSelectedCategory] = useState("Бүгд");
+
+  // Filter хийх логик
+  const filteredServices =
+    selectedCategory === "Бүгд"
+      ? services
+      : services.filter(
+          (service: any) =>
+            service?.fields?.title?.slice(0, 17) === selectedCategory
+        );
+
   return (
     <section
       className={`${
@@ -13,6 +25,7 @@ const Project = ({ bgColor = false }) => {
       }`}
     >
       <div className="max-w-6xl mx-auto px-3 xl:px-0">
+        {/* Тайлбар хэсэг */}
         <div className="grid grid-cols-12 items-center">
           <div className="col-span-12 md:col-span-6 mb-3 xl:mb-0">
             <h1
@@ -20,12 +33,12 @@ const Project = ({ bgColor = false }) => {
                 bgColor ? "text-black" : "text-white"
               } font-semibold mb-2 xl:mb-4`}
             >
-              Гүйцэтгэсэн төслүүд
+              Бидний үйлчилгээ
             </h1>
             <Zuraas />
             <p
               className={`${
-                bgColor ? "text-black" : "text-white/80"
+                bgColor ? "text-slate-600" : "text-white/80"
               } text-sm mt-2 xl:mt-4 max-w-md`}
             >
               Манай баг олон жил туршлага хуримтлуулан барилгын материалын
@@ -43,91 +56,58 @@ const Project = ({ bgColor = false }) => {
             </Button>
           </div>
         </div>
+
+        {/* Category filter */}
         <div className="flex justify-start items-center flex-wrap gap-2 md:gap-4 mt-6">
           <div
-            className={`${
+            onClick={() => setSelectedCategory("Бүгд")}
+            className={`cursor-pointer ${
               bgColor ? "text-black" : "text-white"
-            } text-sm  border border-[#f7c51e] py-1 px-2`}
+            } text-sm border py-1 px-2 ${
+              selectedCategory === "Бүгд"
+                ? "border-[#f7c51e]"
+                : "border-transparent"
+            }`}
           >
             Бүгд
           </div>
-          <div
-            className={`${
-              bgColor ? "text-black" : "text-white"
-            } text-sm py-1 px-2`}
-          >
-            Цэцэрлэгжүүлэлт
-          </div>
-          <div
-            className={`${
-              bgColor ? "text-black" : "text-white"
-            } text-sm py-1 px-2`}
-          >
-            Барилгын материалын худалдаа
-          </div>
-          <div
-            className={`${
-              bgColor ? "text-black" : "text-white"
-            } text-sm py-1 px-2`}
-          >
-            Гадаад худалдаа
-          </div>
+
+          {services.map((service: any, index: any) => {
+            const title = service?.fields?.title.slice(0, 17);
+            return (
+              <div
+                key={index}
+                id="end"
+                onClick={() => setSelectedCategory(title)}
+                className={`cursor-pointer ${
+                  bgColor ? "text-black" : "text-white"
+                } text-sm py-1 px-2 border ${
+                  selectedCategory === title
+                    ? "border-[#f7c51e]"
+                    : "border-transparent"
+                }`}
+              >
+                {title}
+              </div>
+            );
+          })}
         </div>
+
+        {/* Services list */}
         <div className="grid grid-cols-12 mt-8 gap-4">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="col-span-6 xl:col-span-4"
-          >
-            <HoverCard />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="col-span-6 xl:col-span-4"
-          >
-            <HoverCard />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="col-span-6 xl:col-span-4"
-          >
-            <HoverCard />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-            className="col-span-6 xl:col-span-4"
-          >
-            <HoverCard />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="col-span-6 xl:col-span-4"
-          >
-            <HoverCard />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.9 }}
-            className="col-span-6 xl:col-span-4"
-          >
-            <HoverCard />
-          </motion.div>
+          {filteredServices &&
+            filteredServices.map((service: any, index: any) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.4 * index }}
+                className="col-span-6 xl:col-span-4"
+              >
+                <HoverCard service={service} />
+              </motion.div>
+            ))}
         </div>
       </div>
     </section>

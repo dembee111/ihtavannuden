@@ -21,7 +21,38 @@ async function fetchDataByPage() {
   return result.items;
 }
 
+async function fetchDataByService() {
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE as string,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string,
+  });
+
+  const result = await client.getEntries({
+    content_type: "page",
+    "fields.pageType": "service",
+  });
+
+  return result.items;
+}
+
+async function fetchDataByBlog() {
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE as string,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string,
+  });
+
+  const result = await client.getEntries({
+    content_type: "blog",
+    limit: 2,
+  });
+
+  return result.items;
+}
+
 const HomePage = async () => {
+  const blogs = await fetchDataByBlog();
+  const service = await fetchDataByService();
+  const serviceData: any = service[0].fields.components;
   const page = await fetchDataByPage();
   const homeDatas: any = page[0].fields.components;
   const advants = homeDatas.filter(
@@ -33,15 +64,18 @@ const HomePage = async () => {
   const homeAbout = homeDatas.filter(
     (item: any) => item.fields.slug === "home-about"
   );
-  // console.log("🚀 ~ HomePage ~ page:", homeAbout);
+  const services = serviceData.filter(
+    (item: any) => item.fields.slug === "service-list"
+  );
+  console.log("🚀 ~ HomePage ~ page:", services);
   return (
     <>
       <Hero homeHero={homeHero} />
       <Advant advants={advants} />
       <Intro homeAbout={homeAbout} />
-      <Project />
+      <Project services={services} />
       <Banner />
-      <HomeNews />
+      <HomeNews blogs={blogs} />
     </>
   );
 };
