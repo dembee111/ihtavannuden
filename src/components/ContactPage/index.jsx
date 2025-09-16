@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import {
   Mail,
   MapPin,
@@ -8,10 +8,58 @@ import {
   Instagram,
   Youtube,
 } from "lucide-react";
-
-// test
+import { useState } from "react";
+// import { createClient } from "contentful-management";
 
 function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    description: "",
+  });
+
+  const handleInputChange = (e) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      [e.target.name]: e.target.value,
+    }));
+  };
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+
+  //   const client = createClient({
+  //     accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_INPUT_TOKEN,
+  //   });
+
+  //   try {
+  //     const space = await client.getSpace("m13q2cw2lx92");
+  //     const environment = await space.getEnvironment("master");
+
+  //     await environment.createEntry("contact", {
+  //       fields: {
+  //         name: { "en-US": formData.name },
+  //         companyName: { "en-US": formData.company },
+  //         email: { "en-US": formData.email },
+  //         phone: { "en-US": Number(formData.phone) },
+  //         descrption: { "en-US": formData.description },
+  //       },
+  //     });
+
+  //     Swal.fire("Амжилттай илгээгдлээ!", "", "success");
+  //     setFormData({
+  //       name: "",
+  //       phone: "",
+  //       email: "",
+  //       description: "",
+  //       company: "",
+  //     });
+  //   } catch (error) {
+  //     console.error("Error:", error.message);
+  //     Swal.fire("Алдаа гарлаа!", "Системийн алдаа.", "error");
+  //   }
+  // };
+
   return (
     <section className=" mt-32 md:mt-42 mb-12 md:mb-32 px-4 2xl:px-0">
       <div className="max-w-6xl mx-auto space-y-12">
@@ -88,6 +136,26 @@ function ContactPage() {
                 </div>
               </div>
             </div>
+            <div className="grid grid-cols-2 gap-2 items-center">
+              <div className="col-span-1">
+                <Image
+                  src={`/image/about/kod.jpg`}
+                  alt="images"
+                  width={590}
+                  height={587}
+                  className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="col-span-1">
+                <Image
+                  src={`/image/about/kod-1.jpg`}
+                  alt="images"
+                  width={590}
+                  height={587}
+                  className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+            </div>
           </div>
 
           <div className="lg:col-span-6">
@@ -96,25 +164,33 @@ function ContactPage() {
                 type="text"
                 placeholder="Нэр"
                 className="w-full border-b border-gray-300 focus:border-[#f7c51e] outline-none py-2"
+                value={formData.name}
+                onChange={handleInputChange}
               />
               <input
                 type="email"
                 placeholder="Имайл"
                 className="w-full border-b border-gray-300 focus:border-[#f7c51e] outline-none py-2"
+                value={formData.email}
+                onChange={handleInputChange}
               />
               <input
                 type="text"
-                placeholder="Сэдэв"
+                placeholder="Утас"
                 className="w-full border-b border-gray-300 focus:border-[#f7c51e] outline-none py-2"
+                value={formData.phone}
+                onChange={handleInputChange}
               />
               <textarea
                 placeholder="Дэлгэрэнгүй мэдээлэл"
                 rows={5}
                 className="w-full border-b border-gray-300 focus:border-[#f7c51e] outline-none py-2 resize-none"
+                value={formData.description}
+                onChange={handleInputChange}
               />
               <button
                 type="submit"
-                className="bg-[#f7c51e] text-white hover:bg-[#e5b91a] transition text-black font-semibold py-3 px-6  w-full"
+                className="bg-[#f7c51e] text-white hover:bg-[#e5b91a] transition  font-semibold py-3 px-6  w-full"
               >
                 Илгээх
               </button>
