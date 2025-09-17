@@ -36,12 +36,51 @@ const blogDetailsByName = unstable_cache(
   { revalidate: 10 }
 );
 
+export async function generateMetadata({ params }: any) {
+  const { slug } = params;
+  const blogDetail: any = await blogDetailsByName(slug);
+
+  if (!blogDetail) {
+    return {
+      title: "Мэдээ олдсонгүй | Их таван нүдэн ХХК",
+      description:
+        "Таны хайсан үйлчилгээ олдсонгүй. Бидний санал болгож буй бусад үйлчилгээг сонирхоно уу.",
+    };
+  }
+
+  const { title, image } = blogDetail.fields;
+
+  return {
+    title: `${title} | Их таван нүдэн ХХК`,
+    description:
+      title ||
+      "Их таван нүдэн ХХК-ийн мэдээ, мэдээллээс хамгийн сүүлийн үеийн мэдээллийг аваарай.",
+    keywords: `${title}, мэдээ, мэдээлэл, Монгол бизнес, тоног төхөөрөмж, үйлчилгээ`,
+    openGraph: {
+      title: `${title} | Их таван нүдэн ХХК`,
+      description:
+        title ||
+        "Их таван нүдэн ХХК-ийн мэдээ, мэдээллээс хамгийн сүүлийн үеийн мэдээллийг аваарай.",
+      url: `https://ikhtavannuden.mn/news/${slug}`,
+      type: "article",
+      images: [
+        {
+          url:
+            image?.fields?.file?.url ||
+            "https://images.ctfassets.net/5yb73dsvpmu0/3Ti1t3qMRWd7IdIEpOkgrO/558cf821e14e3ef96a7f24b53f30ca6c/cover.png",
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
+  };
+}
+
 const page = async ({ params }: any) => {
   const { slug } = params;
   const blogsAll = await fetchDataByNameProdcut();
-  console.log("blogsAll", blogsAll);
   const blogDetails = await blogDetailsByName(slug);
-  console.log("blogDetails", blogDetails);
   return <BlogDetails blogDetails={blogDetails[0]} blogsAll={blogsAll} />;
 };
 
