@@ -103,7 +103,7 @@ const Project = ({ bgColor = false, services }: any) => {
                 key={index}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.4, delay: 0.2 * index }}
                 className="col-span-6 xl:col-span-4"
               >

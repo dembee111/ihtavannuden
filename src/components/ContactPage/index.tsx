@@ -131,7 +131,7 @@ function ContactPage() {
                 <Phone className="text-[#f7c51e]" />
                 <div>
                   <p className="font-semibold">Утас :</p>
-                  <p>+976 8822 2233</p>
+                  <p>+99113404, 99665235, 88053733</p>
                 </div>
               </div>
 
