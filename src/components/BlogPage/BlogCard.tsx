@@ -4,19 +4,19 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const MONTHS_MN = [
-  "Нэгдүгээр сар",
-  "Хоёрдугаар сар",
-  "Гуравдугаар сар",
-  "Дөрөвдүгээр сар",
-  "Тавдугаар сар",
-  "Зургаадугаар сар",
-  "Долоодугаар сар",
-  "Наймдугаар сар",
-  "Есдүгээр сар",
-  "Аравдугаар сар",
-  "Арваннэгдүгээр сар",
-  "Арванхоёрдугаар сар",
+const monthNames = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
 ];
 
 const BlogCard = ({ blogsData }: any) => {
@@ -28,7 +28,7 @@ const BlogCard = ({ blogsData }: any) => {
           if (!item?.sys?.createdAt) return null;
           const date = new Date(item.sys.createdAt);
           const day = date.getDate();
-          const month = MONTHS_MN[date.getMonth()];
+          const month = monthNames[date.getMonth()];
           const year = date.getFullYear();
           return (
             <motion.div

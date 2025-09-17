@@ -31,7 +31,7 @@ const HomeNews = ({ blogs }: any) => {
           </div>
         </div>
 
-        <div className="grid grid-cols-12 gap-12 mt-16">
+        <div className="grid grid-cols-12 gap-3 md:gap-12 mt-16">
           {blogs &&
             blogs.map((blog: any, index: any) => (
               <motion.div

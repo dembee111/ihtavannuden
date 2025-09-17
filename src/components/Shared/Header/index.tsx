@@ -9,6 +9,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
+  SheetClose,
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 
@@ -92,36 +93,46 @@ const Header = () => {
                   <SheetTitle>Үндсэн цэс</SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col gap-4 mt-8 text-lg ml-4">
-                  <Link
-                    href="/"
-                    className="hover:text-[#f7c51e] transition-colors"
-                  >
-                    Нүүр хуудас
-                  </Link>
-                  <Link
-                    href="/about"
-                    className="hover:text-[#f7c51e] transition-colors"
-                  >
-                    Бидний тухай
-                  </Link>
-                  <Link
-                    href="/project"
-                    className="hover:text-[#f7c51e] transition-colors"
-                  >
-                    Үйлчилгээ
-                  </Link>
-                  <Link
-                    href="/news"
-                    className="hover:text-[#f7c51e] transition-colors"
-                  >
-                    Мэдээлэл
-                  </Link>
-                  <Link
-                    href="/contact"
-                    className="hover:text-[#f7c51e] transition-colors"
-                  >
-                    Холбоо барих
-                  </Link>
+                  <SheetClose asChild>
+                    <Link
+                      href="/"
+                      className="hover:text-[#f7c51e] transition-colors"
+                    >
+                      Нүүр хуудас
+                    </Link>
+                  </SheetClose>
+                  <SheetClose asChild>
+                    <Link
+                      href="/about"
+                      className="hover:text-[#f7c51e] transition-colors"
+                    >
+                      Бидний тухай
+                    </Link>
+                  </SheetClose>
+                  <SheetClose asChild>
+                    <Link
+                      href="/project"
+                      className="hover:text-[#f7c51e] transition-colors"
+                    >
+                      Үйлчилгээ
+                    </Link>
+                  </SheetClose>
+                  <SheetClose asChild>
+                    <Link
+                      href="/news"
+                      className="hover:text-[#f7c51e] transition-colors"
+                    >
+                      Мэдээлэл
+                    </Link>
+                  </SheetClose>
+                  <SheetClose asChild>
+                    <Link
+                      href="/contact"
+                      className="hover:text-[#f7c51e] transition-colors"
+                    >
+                      Холбоо барих
+                    </Link>
+                  </SheetClose>
                 </nav>
               </SheetContent>
             </Sheet>

@@ -21,7 +21,9 @@ const Project = ({ bgColor = false, services }: any) => {
   return (
     <section
       className={`${
-        bgColor ? "bg-white py-24 my-16 xl:my-28" : "bg-[#262626] py-24"
+        bgColor
+          ? "bg-white py-12 md:py-24 my-16 xl:my-28"
+          : "bg-[#262626] py-24"
       }`}
     >
       <div className="max-w-6xl mx-auto px-3 xl:px-0">
@@ -58,7 +60,7 @@ const Project = ({ bgColor = false, services }: any) => {
         </div>
 
         {/* Category filter */}
-        <div className="flex justify-start items-center flex-wrap gap-2 md:gap-4 mt-6">
+        <div className="flex justify-start items-center flex-wrap gap-2 md:gap-4 mt-2 md:mt-6">
           <div
             onClick={() => setSelectedCategory("Бүгд")}
             className={`cursor-pointer ${
@@ -94,7 +96,7 @@ const Project = ({ bgColor = false, services }: any) => {
         </div>
 
         {/* Services list */}
-        <div className="grid grid-cols-12 mt-8 gap-4">
+        <div className="grid grid-cols-12 mt-4 md:mt-8 gap-2 md:gap-4">
           {filteredServices &&
             filteredServices.map((service: any, index: any) => (
               <motion.div
@@ -102,7 +104,7 @@ const Project = ({ bgColor = false, services }: any) => {
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.4 * index }}
+                transition={{ duration: 0.4, delay: 0.4 * index }}
                 className="col-span-6 xl:col-span-4"
               >
                 <HoverCard service={service} />

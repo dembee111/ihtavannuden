@@ -60,7 +60,7 @@ const BlogCard = ({ blog }: any) => {
       <div className="w-full h-[193px] xl:h-[250px] overflow-hidden mb-3 xl:mb-6">
         <Image
           src={`https:${blog?.fields?.image?.fields?.file?.url}`}
-          alt="Их таван нүдэн лого"
+          alt="Их таван компанийн мэдээлэл"
           width={570}
           height={214}
           className="w-full h-full object-center object-cover group-hover:scale-105 transition-all delay-150 duration-300 ease-in-out"

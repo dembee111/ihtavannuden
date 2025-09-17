@@ -79,13 +79,13 @@ const Footer = () => {
                 </Link>
               </div>
             </div>
-            <div className="col-span-12 xl:col-span-4">
+            <div className="col-span-12 xl:col-span-4 h-full">
               <h2 className="text-white uppercase text-lg font-light before-shape ml-5">
                 Үйл <strong className="font-semibold">ажиллагаа</strong>
               </h2>
               <div className="border-b border-white/80 py-2 mb-4"></div>
               <div className="grid grid-cols-3 gap-4">
-                <div>
+                <div className="w-[106px] h-[106px] overflow-hidden">
                   <Image
                     src="/image/porto-1.jpg"
                     alt="Их таван нүдэн лого"
@@ -95,41 +95,38 @@ const Footer = () => {
                     className="w-full h-full object-center object-cover"
                   />
                 </div>
-                <div>
+                <div className="w-[106px] h-[106px] overflow-hidden">
                   <Image
-                    src="/image/porto-1.jpg"
-                    alt="Их таван нүдэн лого"
+                    src="/image/garden.jpg"
+                    alt="Цэцэрлэгжүүлэлт"
                     priority
                     width={99}
                     height={99}
                     className="w-full h-full object-center object-cover"
                   />
                 </div>
-                <div>
+                <div className="w-[106px] h-[106px] overflow-hidden">
                   <Image
-                    src="/image/porto-1.jpg"
+                    src="/image/minning.jpg"
                     alt="Их таван нүдэн лого"
-                    priority
                     width={99}
                     height={99}
                     className="w-full h-full object-center object-cover"
                   />
                 </div>
-                <div>
+                <div className="w-[106px] h-[106px] overflow-hidden">
                   <Image
-                    src="/image/porto-1.jpg"
-                    alt="Их таван нүдэн лого"
-                    priority
+                    src="/image/trade.jpg"
+                    alt="Гадаад худалдаа"
                     width={99}
                     height={99}
                     className="w-full h-full object-center object-cover"
                   />
                 </div>
-                <div>
+                <div className="w-[106px] h-[106px] overflow-hidden">
                   <Image
-                    src="/image/porto-1.jpg"
-                    alt="Их таван нүдэн лого"
-                    priority
+                    src="/image/tools.jpg"
+                    alt="Барилгын материалын зураг"
                     width={99}
                     height={99}
                     className="w-full h-full object-center object-cover"
