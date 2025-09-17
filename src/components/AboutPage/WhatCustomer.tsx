@@ -6,27 +6,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 
-const testimonials = [
-  {
-    text: `"Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum."`,
-    name: "Patrick Johanson",
-    title: "Architect",
-    img: "/image/about/person1.webp",
-  },
-  {
-    text: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit."`,
-    name: "Sarah Williams",
-    title: "Designer",
-    img: "/image/about/person2.webp",
-  },
-  {
-    text: `"Suspendisse potenti. Vivamus eget arcu et urna placerat."`,
-    name: "Michael Brown",
-    title: "Engineer",
-    img: "/image/about/person1.webp",
-  },
-];
-
 const WhatCustomer = ({ data }: any) => {
   return (
     <div className="my-16 lg:my-20 2xl:px-0 px-4 ">
@@ -63,12 +42,12 @@ const WhatCustomer = ({ data }: any) => {
                       {t}
                     </p>
                     <div className="flex flex-col lg:flex-row items-start md:items-center justify-start md:justify-center lg:justify-start gap-4 mt-4">
-                      <div className="relative h-24 w-24">
+                      <div className="relative h-24 w-36">
                         <Image
                           src={`https:${data?.fields?.partnerImages[i]?.fields?.file?.url}`}
                           alt={t}
                           fill
-                          className="object-cover rounded-full border-4 border-[#eaeaea]"
+                          className="object-cover rounded border-4 border-[#eaeaea]"
                         />
                       </div>
                       <div>

@@ -23,7 +23,7 @@ const Footer = () => {
                 <h5 className="text-white">
                   Утас:{" "}
                   <span className="text-[#f7c51e] ml-2">
-                    99113404, 99665235
+                    99113404, 99665235, 88053733
                   </span>
                 </h5>
               </div>
@@ -150,14 +150,26 @@ const Footer = () => {
               </Link>
             </div>
             <div className="col-span-12 xl:col-span-4 flex justify-center">
-              <Image
-                src="/image/logo.jpg"
-                alt="Их таван нүдэн лого"
-                priority
-                width={177}
-                height={60}
-                className="w-[177px] h-[60px] object-center object-cover"
-              />
+              <div className="flex justify-start items-center gap-1 xl:gap-2">
+                <Link
+                  href="/"
+                  className="cursor-pointer w-[50px] xl:w-[60px] h-[50px] xl:h-[60px] overflow-hidden"
+                >
+                  <Image
+                    src="/image/logo.png"
+                    alt="Их таван нүдэн лого"
+                    priority
+                    width={300}
+                    height={300}
+                    className="w-[50px] xl:w-[60px] h-[50px] xl:h-[60px] object-center object-cover dark:invert"
+                  />
+                </Link>
+                <h1
+                  className={`text-white font-semibold uppercase text-base md:text-xl leading-5 md:leading-6 tracking-wider`}
+                >
+                  Их таван <br /> нүдэн
+                </h1>
+              </div>
             </div>
             <Link
               href="https://www.facebook.com/profile.php?id=61579746330654&rdid=SBh1PslYrvKpFEDa&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16wAXELzzN%2F#"

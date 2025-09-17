@@ -104,7 +104,7 @@ const Project = ({ bgColor = false, services }: any) => {
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.4 * index }}
+                transition={{ duration: 0.4, delay: 0.2 * index }}
                 className="col-span-6 xl:col-span-4"
               >
                 <HoverCard service={service} />
