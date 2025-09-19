@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: any) {
     };
   }
 
-  const { title, image } = blogDetail.fields;
+  const { title, image } = blogDetail?.fields ?? {};
 
   return {
     title: `${title} | Их таван нүдэн ХХК`,

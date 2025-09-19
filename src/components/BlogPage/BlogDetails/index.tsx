@@ -147,7 +147,7 @@ const BlogDetails = ({ blogDetails, blogsAll }: any) => {
                     <h2 className="text-2xl md:text-3xl font-semibold">
                       {dateParts.day}
                     </h2>
-                    <p className="uppercase text-xs text-[#6d6d6d]">
+                    <p className="uppercase text-[9px] md:text-xs text-[#6d6d6d]">
                       {dateParts.month}
                     </p>
                     <p className="text-xs text-[#6d6d6d]">{dateParts.year}</p>
