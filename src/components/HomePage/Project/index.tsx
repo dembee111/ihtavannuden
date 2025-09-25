@@ -59,7 +59,7 @@ const Project = ({ bgColor = false, services }: any) => {
         </div>
 
         {/* Category filter */}
-        <div className="flex justify-start items-center flex-wrap gap-2 md:gap-4 mt-2 md:mt-6">
+        <div className="flex justify-start items-center flex-wrap gap-2 md:gap-4 mt-8 md:mt-6">
           <div
             onClick={() => setSelectedCategory("Бүгд")}
             className={`cursor-pointer ${
@@ -86,20 +86,25 @@ const Project = ({ bgColor = false, services }: any) => {
                     : "border-transparent"
                 }`}
               >
-                {title.length > 17 ? title.slice(0, 17) + "..." : title}
+                {title}
               </div>
             );
           })}
         </div>
 
         {/* Services list */}
-        <div className="grid grid-cols-12 mt-4 md:mt-8 gap-2 md:gap-4">
-          {filteredServices &&
+        <div className="grid grid-cols-12 mt-8 md:mt-8 gap-2 md:gap-4">
+          {filteredServices && filteredServices.length > 0 ? (
             filteredServices.map((service: any, index: any) => (
               <div key={index} className="col-span-6 xl:col-span-4">
                 <HoverCard service={service} />
               </div>
-            ))}
+            ))
+          ) : (
+            <div className="col-span-12 text-center text-white py-6">
+              Үйлчилгээ олдсонгүй
+            </div>
+          )}
         </div>
       </div>
     </section>
