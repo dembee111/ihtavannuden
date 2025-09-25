@@ -14,8 +14,7 @@ const Project = ({ bgColor = false, services }: any) => {
     selectedCategory === "Бүгд"
       ? services
       : services.filter(
-          (service: any) =>
-            service?.fields?.title?.slice(0, 17) === selectedCategory
+          (service: any) => service?.fields?.title === selectedCategory
         );
 
   return (
@@ -73,13 +72,11 @@ const Project = ({ bgColor = false, services }: any) => {
           >
             Бүгд
           </div>
-
           {services.map((service: any, index: any) => {
-            const title = service?.fields?.title.slice(0, 17);
+            const title = service?.fields?.title;
             return (
               <div
                 key={index}
-                id="end"
                 onClick={() => setSelectedCategory(title)}
                 className={`cursor-pointer ${
                   bgColor ? "text-black" : "text-white"
@@ -89,7 +86,7 @@ const Project = ({ bgColor = false, services }: any) => {
                     : "border-transparent"
                 }`}
               >
-                {title}
+                {title.length > 17 ? title.slice(0, 17) + "..." : title}
               </div>
             );
           })}
