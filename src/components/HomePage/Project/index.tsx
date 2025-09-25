@@ -19,7 +19,7 @@ const Project = ({ bgColor = false, services }: any) => {
         : services.filter(
             (service: any) => service?.fields?.title === selectedCategory
           );
-    console.log(filteredServices1, "filteredServices1");
+
     setFilteredServices(filteredServices1);
   }, [selectedCategory]);
 
@@ -62,6 +62,40 @@ const Project = ({ bgColor = false, services }: any) => {
               <Link href="/work">Бүгдийг үзэх</Link>
             </Button>
           </div>
+        </div>
+
+        {/* Category filter */}
+        <div className="flex justify-start items-center flex-wrap gap-2 md:gap-4 mt-8 md:mt-6">
+          <div
+            onClick={() => setSelectedCategory("Бүгд")}
+            className={`cursor-pointer ${
+              bgColor ? "text-black" : "text-white"
+            } text-sm border py-1 px-2 ${
+              selectedCategory === "Бүгд"
+                ? "border-[#f7c51e]"
+                : "border-transparent"
+            }`}
+          >
+            Бүгд
+          </div>
+          {services.map((service: any, index: any) => {
+            const title = service?.fields?.title;
+            return (
+              <div
+                key={index}
+                onClick={() => setSelectedCategory(title)}
+                className={`cursor-pointer ${
+                  bgColor ? "text-black" : "text-white"
+                } text-sm py-1 px-2 border ${
+                  selectedCategory === title
+                    ? "border-[#f7c51e]"
+                    : "border-transparent"
+                }`}
+              >
+                {title}
+              </div>
+            );
+          })}
         </div>
 
         {/* Services list */}
