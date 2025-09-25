@@ -12,6 +12,7 @@ import {
   SheetClose,
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
+import LanguageSelector from "@/components/Shared/LanguageSelector";
 
 const Header = () => {
   const pathname = usePathname();
@@ -78,6 +79,7 @@ const Header = () => {
             >
               Холбоо барих
             </Link>
+            <LanguageSelector />
           </div>
 
           {/* Mobile Burger Menu */}
@@ -133,6 +135,7 @@ const Header = () => {
                       Холбоо барих
                     </Link>
                   </SheetClose>
+                  <LanguageSelector />
                 </nav>
               </SheetContent>
             </Sheet>

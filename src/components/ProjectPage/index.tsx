@@ -10,6 +10,7 @@ async function fetchDataByPage() {
   const result = await client.getEntries({
     content_type: "page",
     "fields.pageType": "service",
+    "fields.locale": "mn",
   });
 
   return result.items;

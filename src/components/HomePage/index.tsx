@@ -30,6 +30,7 @@ async function fetchDataByService() {
   const result = await client.getEntries({
     content_type: "page",
     "fields.pageType": "service",
+    "fields.locale": "mn",
   });
 
   return result.items;
@@ -43,6 +44,7 @@ async function fetchDataByBlog() {
 
   const result = await client.getEntries({
     content_type: "blog",
+    "fields.locale": "mn",
     limit: 2,
   });
 
@@ -67,7 +69,7 @@ const HomePage = async () => {
   const services = serviceData.filter(
     (item: any) => item.fields.slug === "service-list"
   );
-  console.log("🚀 ~ HomePage ~ page:", services);
+
   return (
     <>
       <Hero homeHero={homeHero} />

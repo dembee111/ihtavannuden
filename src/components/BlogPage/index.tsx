@@ -10,6 +10,7 @@ const client = createClient({
 async function fetchDataByBlogs() {
   const result = await client.getEntries({
     content_type: "blog",
+    "fields.locale": "mn",
   });
   return result.items;
 }

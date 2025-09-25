@@ -14,6 +14,7 @@ export async function fetchDataByPage() {
     const result = await client.getEntries({
       content_type: "page",
       "fields.pageType": "about",
+      "fields.locale": "mn",
     });
 
     return result.items[0]?.fields?.components || [];
@@ -25,6 +26,7 @@ export async function fetchDataByPage() {
 async function fetchDataByOurExperts() {
   const result = await client.getEntries({
     content_type: "ourExperts",
+    "fields.locale": "mn",
   });
   return result.items[0];
 }
@@ -32,6 +34,7 @@ async function fetchDataByOurExperts() {
 async function fetchDataByOurBrands() {
   const result = await client.getEntries({
     content_type: "ourBrand",
+    "fields.locale": "mn",
   });
   return result.items[0];
 }

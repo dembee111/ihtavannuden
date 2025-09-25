@@ -99,16 +99,9 @@ const Project = ({ bgColor = false, services }: any) => {
         <div className="grid grid-cols-12 mt-4 md:mt-8 gap-2 md:gap-4">
           {filteredServices &&
             filteredServices.map((service: any, index: any) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.1 }}
-                transition={{ duration: 0.4, delay: 0.2 * index }}
-                className="col-span-6 xl:col-span-4"
-              >
+              <div key={index} className="col-span-6 xl:col-span-4">
                 <HoverCard service={service} />
-              </motion.div>
+              </div>
             ))}
         </div>
       </div>
