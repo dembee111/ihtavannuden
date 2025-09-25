@@ -2,6 +2,7 @@
 import * as React from "react";
 import { Button } from "@/components/ui/button";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -32,6 +33,19 @@ const DropdownMenuCheckboxes = () => {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" className="text-gray-800 w-fit">
+          <Image
+            src={
+              isEnglish === null
+                ? "/image/mn.png"
+                : isEnglish
+                ? "/image/en.png"
+                : "/image/mn.png"
+            }
+            alt={"ddd"}
+            width={60}
+            height={40}
+            className="w-full h-full object-center object-cover group-hover:scale-105 transition-transform"
+          />
           {isEnglish === null ? "…" : isEnglish ? "English" : "Монгол хэл"}
         </Button>
       </DropdownMenuTrigger>
