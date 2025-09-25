@@ -37,7 +37,7 @@ const blogDetailsByName = unstable_cache(
 );
 
 export async function generateMetadata({ params }: any) {
-  const { slug } = params;
+  const { slug } = await params;
   const blogDetail: any = await blogDetailsByName(slug);
 
   if (!blogDetail) {
@@ -78,7 +78,7 @@ export async function generateMetadata({ params }: any) {
 }
 
 const page = async ({ params }: any) => {
-  const { slug } = params;
+  const { slug } = await params;
   const blogsAll = await fetchDataByNameProdcut();
   const blogDetails = await blogDetailsByName(slug);
   return <BlogDetails blogDetails={blogDetails[0]} blogsAll={blogsAll} />;
