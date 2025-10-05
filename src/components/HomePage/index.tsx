@@ -5,45 +5,60 @@ import Project from "./Project";
 import Banner from "./Banner";
 import HomeNews from "./HomeNews";
 import { createClient } from "contentful";
+import { unstable_cache } from "next/cache";
 
-// 🚀 Disable ISR / caching for Contentful
-export const revalidate = 0;
+// ♻️ Revalidate every 10 minutes (600 seconds)
+export const revalidate = 600;
 
+// 🔗 Contentful client
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE as string,
   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string,
 });
 
-// -------- Fetch functions -------- //
-async function fetchDataByPage() {
-  const result = await client.getEntries({
-    content_type: "page",
-    "fields.pageType": "home",
-  });
-  return result.items;
-}
+// -------- Fetch functions with caching -------- //
+const fetchDataByPage = unstable_cache(
+  async () => {
+    const result = await client.getEntries({
+      content_type: "page",
+      "fields.pageType": "home",
+      "fields.locale": "mn",
+    });
+    return result.items;
+  },
+  ["home_page"], // unique cache key
+  { revalidate: 600 }
+);
 
-async function fetchDataByService() {
-  const result = await client.getEntries({
-    content_type: "page",
-    "fields.pageType": "service",
-    "fields.locale": "mn",
-  });
-  return result.items;
-}
+const fetchDataByService = unstable_cache(
+  async () => {
+    const result = await client.getEntries({
+      content_type: "page",
+      "fields.pageType": "service",
+      "fields.locale": "mn",
+    });
+    return result.items;
+  },
+  ["service_page"],
+  { revalidate: 600 }
+);
 
-async function fetchDataByBlog() {
-  const result = await client.getEntries({
-    content_type: "blog",
-    "fields.locale": "mn",
-    limit: 2,
-  });
-  return result.items;
-}
+const fetchDataByBlog = unstable_cache(
+  async () => {
+    const result = await client.getEntries({
+      content_type: "blog",
+      "fields.locale": "mn",
+      limit: 2,
+    });
+    return result.items;
+  },
+  ["home_blogs"],
+  { revalidate: 600 }
+);
 
 // -------- Page Component -------- //
 const HomePage = async () => {
-  // ⚡ Parallel fetch with Promise.all
+  // ⚡ Parallel fetch for faster SSR
   const [blogs, service, page] = await Promise.all([
     fetchDataByBlog(),
     fetchDataByService(),

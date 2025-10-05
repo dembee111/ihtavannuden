@@ -1,65 +1,58 @@
+import { createClient } from "contentful";
 import OurExperts from "./OurExperts";
 import WhatCustomer from "./WhatCustomer";
 import DoYou from "./DoYou";
 import Hero from "./Hero";
-import { createClient } from "contentful";
+import { unstable_cache } from "next/cache";
 
+// ✅ Contentful client үүсгэх
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE as string,
   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string,
 });
 
-export async function fetchDataByPage() {
-  try {
-    const result = await client.getEntries(
-      {
-        content_type: "page",
-        "fields.pageType": "about",
-        "fields.locale": "mn",
-      },
-      { cache: "no-store" } // 🔴 cache устгах тохиргоо
-    );
-
+// ✅ Page data (about page)
+const fetchDataByPage = unstable_cache(
+  async () => {
+    const result = await client.getEntries({
+      content_type: "page",
+      "fields.pageType": "about",
+      "fields.locale": "mn",
+    });
     return result.items[0]?.fields?.components || [];
-  } catch (error) {
-    console.error("Contentful fetch error:", error);
-    return [];
-  }
-}
+  },
+  ["about-page-data"],
+  { revalidate: 3600 } // ⏱ 1 цаг тутамд cache шинэчлэнэ
+);
 
-async function fetchDataByOurExperts() {
-  try {
-    const result = await client.getEntries(
-      {
-        content_type: "ourExperts",
-        "fields.locale": "mn",
-      },
-      { cache: "no-store" }
-    );
+// ✅ OurExperts data
+const fetchDataByOurExperts = unstable_cache(
+  async () => {
+    const result = await client.getEntries({
+      content_type: "ourExperts",
+      "fields.locale": "mn",
+    });
     return result.items[0] || null;
-  } catch (error) {
-    console.error("OurExperts fetch error:", error);
-    return null;
-  }
-}
+  },
+  ["our-experts-data"],
+  { revalidate: 3600 } // ⏱ 1 цаг
+);
 
-async function fetchDataByOurBrands() {
-  try {
-    const result = await client.getEntries(
-      {
-        content_type: "ourBrand",
-        "fields.locale": "mn",
-      },
-      { cache: "no-store" }
-    );
+// ✅ OurBrands data
+const fetchDataByOurBrands = unstable_cache(
+  async () => {
+    const result = await client.getEntries({
+      content_type: "ourBrand",
+      "fields.locale": "mn",
+    });
     return result.items[0] || null;
-  } catch (error) {
-    console.error("OurBrand fetch error:", error);
-    return null;
-  }
-}
+  },
+  ["our-brands-data"],
+  { revalidate: 3600 } // ⏱ 1 цаг
+);
 
 const AboutPage = async () => {
+  // 🚀 Promise.all ашиглан зэрэг татах
   const [aboutData, ourExpertsData, ourBrandData] = await Promise.all([
     fetchDataByPage(),
     fetchDataByOurExperts(),
