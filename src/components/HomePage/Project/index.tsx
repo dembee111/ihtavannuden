@@ -6,6 +6,17 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import HoverMobileCard from "@/components/Shared/HoverMobileCard";
+import Marquee from "react-fast-marquee";
+
+const partners = [
+  { name: "Champion", logo: "/image/logo/1.png" },
+  { name: "HILTI", logo: "/image/logo/2.png" },
+  { name: "PLANAM", logo: "/image/logo/3.png" },
+  { name: "Hauser", logo: "/image/logo/4.png" },
+  { name: "Hauser", logo: "/image/logo/5.png" },
+  { name: "Hauser", logo: "/image/logo/6.png" },
+  { name: "Hauser", logo: "/image/logo/7.png" },
+];
 
 const Project = ({ bgColor = false, services }: any) => {
   const [selectedCategory, setSelectedCategory] = useState("Бүгд");
@@ -17,7 +28,7 @@ const Project = ({ bgColor = false, services }: any) => {
       selectedCategory === "Бүгд"
         ? services
         : services.filter(
-            (service: any) => service?.fields?.title === selectedCategory
+            (service: any) => service?.fields?.title === selectedCategory,
           );
 
     setFilteredServices(filteredServices1);
@@ -111,6 +122,29 @@ const Project = ({ bgColor = false, services }: any) => {
               Үйлчилгээ олдсонгүй
             </div>
           )}
+        </div>
+        <div className="mt-16">
+          <h2
+            className={`text-xl xl:text-2xl font-semibold mb-6 ${
+              bgColor ? "text-black" : "text-white"
+            }`}
+          >
+            Манай брэндүүд
+          </h2>
+          <Marquee speed={40} pauseOnHover gradient={false} className="mt-16">
+            {partners.map((partner, index) => (
+              <div
+                key={index}
+                className="mx-6 flex items-center justify-center grayscale hover:grayscale-0 transition"
+              >
+                <img
+                  src={partner.logo}
+                  alt={partner.name}
+                  className="max-h-16 object-contain"
+                />
+              </div>
+            ))}
+          </Marquee>
         </div>
       </div>
     </section>

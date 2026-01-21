@@ -2,6 +2,12 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Navigation, Pagination } from "swiper/modules";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   AlertDialog,
@@ -15,7 +21,7 @@ import {
 } from "@/components/ui/alert-dialog";
 
 export default function HoverCard({ service }: any) {
-  console.log("🚀 ~ HoverCard ~ service:", service);
+  console.log("TCL: HoverCard -> service", service);
   const [hovered, setHovered] = useState(false);
 
   const handleToggle = () => {
@@ -76,25 +82,54 @@ export default function HoverCard({ service }: any) {
             </AnimatePresence>
           </div>
         </AlertDialogTrigger>
+        <AlertDialogContent className="w-[95vw] max-w-4xl max-h-[90vh] overflow-y-auto">
+          <AlertDialogHeader className="space-y-4">
+            {service?.fields?.images?.length > 0 ? (
+              <Swiper
+                modules={[Navigation, Pagination]}
+                spaceBetween={10}
+                slidesPerView={1}
+                navigation
+                pagination={{ clickable: true }}
+                className="relative w-[280px]  md:w-[450px] mx-auto"
+              >
+                {service.fields.images.map((img: any, index: number) => (
+                  <SwiperSlide key={index}>
+                    <div className="relative w-full h-[220px] sm:h-[280px] md:h-[360px]">
+                      <Image
+                        src={`https:${img.fields.file.url}`}
+                        alt={service?.fields?.title}
+                        fill
+                        className="object-contain rounded-lg"
+                      />
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            ) : (
+              <div className="relative w-full h-[220px] sm:h-[280px] md:h-[360px] max-w-[500px] mx-auto">
+                <Image
+                  src={`https:${service?.fields?.image?.fields?.file?.url}`}
+                  alt={service?.fields?.title}
+                  fill
+                  className="object-contain rounded-lg"
+                />
+              </div>
+            )}
 
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <div>
-              <Image
-                src={`https:${service?.fields?.image?.fields?.file?.url}`}
-                alt={service?.fields?.title}
-                width={800}
-                height={400}
-                className="w-full h-full object-center object-cover group-hover:scale-105 transition-transform"
-              />
-            </div>
-            <AlertDialogTitle>{service?.fields?.title}</AlertDialogTitle>
-            <AlertDialogDescription>
+            <AlertDialogTitle className="text-left text-lg sm:text-xl">
+              {service?.fields?.title}
+            </AlertDialogTitle>
+
+            <AlertDialogDescription className="max-h-[160px] overflow-y-auto text-sm sm:text-base">
               {service?.fields?.content}
             </AlertDialogDescription>
           </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel>Хаах</AlertDialogCancel>
+
+          <AlertDialogFooter className="pt-4">
+            <AlertDialogCancel className="w-full sm:w-auto">
+              Хаах
+            </AlertDialogCancel>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
