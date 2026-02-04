@@ -31,7 +31,7 @@ const Footer = () => {
                 <h5 className="text-white">
                   Имэйл:{" "}
                   <span className="text-[#f7c51e] ml-2">
-                    Ikhtavannuden@gmail.com
+                    Info@ikhtavannuden.mn
                   </span>
                 </h5>
               </div>
